@@ -5,11 +5,11 @@ full_name: DI Chief of Staff
 parent: '[ORG]AIOC-DI'
 accountable_to: '[ORG]CELL-DDL'
 type: AI Chief of Staff
-card_version: v0.1.0
-version: 0.1.0
+card_version: v0.1.1
+version: 0.1.1
 lineage:
   id: '[ORG]CELL-DCS'
-  version: 0.1.0
+  version: 0.1.1
   relation: original
 lifecycle_state: designed
 fixed_test:
@@ -25,6 +25,7 @@ ports:
   identification: technical-key
   accepted_content:
   - release notice
+  - return answer
   - source reference
   - needs answer
   - needs status
@@ -94,6 +95,7 @@ ports:
   identification: technical-key
   accepted_content:
   - release notice
+  - return answer
   authority_limit: the read scope signed under connect-external-port over [ORG]AIOC-PPD
   audit_trail: unit register; serve log of [ORG]AIOC-PPD
   required_tests:
@@ -119,6 +121,19 @@ ports:
   accepted_content:
   - return
   authority_limit: returns only, under the scope signed over [ORG]AIOC-TOM
+  audit_trail: unit register; the Work Item record
+  required_tests:
+  - TEST-DI-DCS v1
+  enforcement: shared-gateway-outside-unit
+- unit: '[ORG]CELL-DCS'
+  port: tom-in
+  direction: input
+  type: AI
+  identification: technical-key
+  accepted_content:
+  - return answer
+  authority_limit: answers to this AIOC's returns only, under the scope signed over
+    [ORG]AIOC-TOM
   audit_trail: unit register; the Work Item record
   required_tests:
   - TEST-DI-DCS v1

@@ -12,14 +12,14 @@
 
 The writing repository of **`[ORG]AIOC-DI`, Delivery and Implementation**: the mother text of the 49GAION Library part of the same name (49GAION Standard §3.1, item 5, and its Protocol section, both proposed on 15 October 2026). In each organisation this repository is named `<org>aioc-di` (Naming Standard R9). It is written for any organisation and holds no organisation data.
 
-**Status: draft `v0.1.0`, slice 1 of 4, 15 October 2026. Nothing here has run; every fixed test reads `NOT_RUN`.**
+**Status: draft `v0.1.1`, slice 1 of 4, 16 October 2026 (`decisions/DR-0002`). Nothing here has run; every fixed test reads `NOT_RUN`.**
 
 ## Where to read
 
 | File | What it is |
 |---|---|
 | [`blueprint/DI-BLUEPRINT.md`](blueprint/DI-BLUEPRINT.md) | the blueprint, on the 49GAION AIOC Blueprint Template at `e89ed1d`: identity, card, placement, positions, the five stages with their inputs, outputs and done-tests (§5.0), every capability, the human decisions (§13), Cells and Pods (§17), the package parts (Annex A), the gap checks (Annex F) |
-| [`tests/TEST-DI.md`](tests/TEST-DI.md) | the fixed test, written before use: 47 cases and the Delivery Lead's seat test |
+| [`tests/TEST-DI.md`](tests/TEST-DI.md) | the fixed test, written before use: 48 cases and the Delivery Lead's seat test |
 | [`cards/`](cards/) | the unit cards of its four Pods and thirteen Cells, and the bot identity cards of its twelve AI Cells, generated from the blueprint |
 | [`docs/HISTORY.md`](docs/HISTORY.md) | why this stage exists |
 | [`upstream/PROPOSALS.md`](upstream/PROPOSALS.md) | the changes this AIOC needs from Process and Position Design, the target operating model and Source Lifecycle |

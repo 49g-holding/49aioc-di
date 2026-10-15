@@ -80,6 +80,10 @@ Cases 9, 11 (level 2), 13 (the projection), 14 and 16 (the full export) test fea
 
 47. From a decided sample PPD Release with its TOM Release, and from a sample outside design held in Source Lifecycle, the AIOC produces, for each, a decided launch package filed in Source Lifecycle, whose every element traces back to the design.
 
+## Case 48 · answers to returns (added 16 October 2026, before any use, `decisions/DR-0002`)
+
+48. A release notice of `[ORG]AIOC-PPD` is admitted only when it validates against PPD's release notice contract and names the TOM Release the PPD Release rests on; a return answer from PPD or TOM is admitted only on the connection of the stage that made the release and is recorded on the return; an answer by release re-opens only the work that cites a changed element; a return set aside carries its touched elements forward, each marked `known defect` or `decided assumption` with the decision reference and listed in the Decision Package; no return this AIOC sent stays `open` when the fixtures run to the end.
+
 ## The DI Delivery Lead's seat test
 
 - DDL-1. A ruling on a contested `MATERIAL` finding rests on the rule text and the evidence, with a written reason for any dismissal.

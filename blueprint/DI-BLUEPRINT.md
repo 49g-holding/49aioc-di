@@ -7,7 +7,7 @@ blueprint:
   organisation: "<organisation>"          # filled in each organisation's own copy
   type: "specialised"
   org_aion: "[ORG]AION"
-  blueprint_version: "v0.1.0"
+  blueprint_version: "v0.1.1"
   status: "draft"
   template:
     name: "49GAION AIOC Blueprint Template"
@@ -15,7 +15,7 @@ blueprint:
     source: "github.com/49g-holding/49GAION-aioc, template/AIOC-BLUEPRINT-TEMPLATE.md @ e89ed1d"
   mother:
     name: "49GAION Delivery and Implementation"
-    version: "part card v1 (DRAFT), proposed"
+    version: "part card v1 (DRAFT)"
     source: "github.com/49g-holding/49GAION-protocol, library/cards/delivery-and-implementation.part-card.json and the Protocol section Delivery and Implementation (pull request #36); Standard §3.1, item 5 (49GAION pull request #68, DR-0017)"
   writing_repository: "<org>aioc-di"
   code_project: "<org>aioc-di, on the organisation's code platform"
@@ -26,9 +26,9 @@ blueprint:
     functional: ["Intake and Design Map", "Needs Requests", "Gap Audit", "Health Check", "Procedure Writing", "Briefs", "Transition and Go-live Criteria", "Answers", "Independent Review", "Decision Package and Filing"]
 ```
 
-# Blueprint · `[ORG]AIOC-DI` · Delivery and Implementation · `v0.1.0`
+# Blueprint · `[ORG]AIOC-DI` · Delivery and Implementation · `v0.1.1`
 
-**Draft, 15 October 2026.** Written by `[ORG]AIOC-OCO` on the directions recorded in `decisions/DR-0001`. This is the first blueprint of Delivery and Implementation, written for any organisation as the mother text of the Library part 49GAION Delivery and Implementation (proposed). It covers **slice 1 of 4, the gap audit and the launch essentials**, which the governing seat started first. The later slices are named in §5.0 and come as later versions. Every rule rests on a 49GAION text, on the blueprints of `[ORG]AIOC-PPD` or `[ORG]AIOC-TOM` (cited by section and version), or on the product requirements of this part (`PRD-[ORG]AIOC-DI-001` v0.4, in its code project), or is new here and marked **New**. Nothing here has run. Every fixed test reads `NOT_RUN`.
+**Draft, 15 October 2026; v0.1.1, 16 October 2026, receives the answers to its returns and the release notices of `[ORG]AIOC-PPD` under their contracts, now that both stages before it are connected (`decisions/DR-0002`).** Written by `[ORG]AIOC-OCO` on the directions recorded in `decisions/DR-0001`. This is the first blueprint of Delivery and Implementation, written for any organisation as the mother text of the Library part 49GAION Delivery and Implementation. It covers **slice 1 of 4, the gap audit and the launch essentials**, which the governing seat started first. The later slices are named in §5.0 and come as later versions. Every rule rests on a 49GAION text, on the blueprints of `[ORG]AIOC-PPD` or `[ORG]AIOC-TOM` (cited by section and version), or on the product requirements of this part (`PRD-[ORG]AIOC-DI-001` v0.4, in its code project), or is new here and marked **New**. Nothing here has run. Every fixed test reads `NOT_RUN`.
 
 > **Delivery and Implementation in one page**
 >
@@ -74,11 +74,11 @@ blueprint:
 | `[ORG]AION` | `[ORG]AION`, based on 49GAION Standard `v1.5.0`, with the unreleased `v1.6.0` texts on main |
 | Versioned Definition | this file; the Panel and the Back office are built from it |
 | Organisation | `<organisation>` |
-| Made from | the Library part 49GAION Delivery and Implementation, part card `v1` (DRAFT), and its Protocol section, both proposed on 15 October 2026 (`decisions/DR-0001`) |
+| Made from | the Library part 49GAION Delivery and Implementation, part card `v1` (DRAFT), and its Protocol section, both merged on 15 October 2026 (`decisions/DR-0001`) |
 | Template | 49GAION AIOC Blueprint Template `v1.5.0` at `e89ed1d` (with the `v1.6.0` additions) |
 | Mother | 49GAION Delivery and Implementation, part card `v1`. This text is its mother blueprint |
 | Product requirements | `PRD-[ORG]AIOC-DI-001` v0.4, approved by the governing seat on 15 October 2026; its requirement IDs (`FR-n`, `NFR-n`) are cited here |
-| Blueprint version and status | `v0.1.0` · draft · slice 1 |
+| Blueprint version and status | `v0.1.1` · draft · slice 1 |
 | Accountable seat (`[ORG]HOAC-ACS`) | the DI Delivery Lead, `[ORG]CELL-DDL`, a HOAC position. Who occupies it is top management's own mechanism; this AIOC never sees it (Standard §1.1, items 9 and 10) |
 | Reports to | the Cell carrying `[ORG]HOAC-TM` |
 | Writing repository | `<org>aioc-di`, plus `-records` for an organisation's runs and `-records-restricted` for run records that touch a Strictly confidential source (Naming Standard R9). The mother text lives in a public repository and holds no organisation data |
@@ -101,7 +101,7 @@ card:
   inner_units: ["[ORG]CELL-DDL", "[ORG]CELL-DCS", "[ORG]POD-DD", "[ORG]POD-DP", "[ORG]POD-DA", "[ORG]POD-DR"]
   type: "specialised"
   org_aion: "[ORG]AION"
-  card_version: "v0.1.0"
+  card_version: "v0.1.1"
   input_door: "Chief of Staff"
   wake: { method: "queue", verified: false }
   receives:
@@ -110,8 +110,12 @@ card:
       acceptance_test: "TEST-DI v1, cases 1, 18, 19"
       decision_needed: false
     - kind: "release notice"              # from [ORG]AIOC-PPD, directly, through the tool gateway
-      format: "release notice: PPD Release ID, manifest hash, the reference of its filed copy in [ORG]AIOC-SL; the TOM Release it was designed from"
-      acceptance_test: "TEST-DI v1, cases 1, 20"
+      format: "release notice of [ORG]AIOC-PPD (its contracts/release-notice.schema.json, urn:49gaion:library:ppd:release-notice:v0.4): the PPD Release ID, version and manifest hash, the TOM Release it rests on, its filed reference, and the returns it answers"
+      acceptance_test: "TEST-DI v1, cases 1, 20, 48"
+      decision_needed: false
+    - kind: "return answer"               # from [ORG]AIOC-PPD or [ORG]AIOC-TOM: the end, or the next round, of a return this AIOC sent
+      format: "the return at its next version (49GAION-protocol library/contracts/design-return.schema.json)"
+      acceptance_test: "TEST-DI v1, case 48"
       decision_needed: false
     - kind: "source reference"            # the outside design (mode B) and the organisation's other sources, from the output socket of [ORG]AIOC-SL
       format: "source reference (ID + version + hash; held or not held)"
@@ -148,7 +152,7 @@ card:
   anatomy:
     panel: { health: { tests: true, metrics: ["stuck", "returned", "late", "run state", "returns open", "returns answered", "needs open", "needs past deadline", "gaps by tier", "gaps by state", "procedures by state", "briefs by state", "go-live criteria by state", "answers given", "answers 'I do not know'", "citations refused by the verifier", "reviews held", "review budget used"] } }
     back_office: { converses_with_humans: true, hosts: ["Chief of Staff", "Office"], protocol_traffic: true }
-    definition: { location: "<org>aioc-di, blueprint/DI-BLUEPRINT.md", version: "v0.1.0" }
+    definition: { location: "<org>aioc-di, blueprint/DI-BLUEPRINT.md", version: "v0.1.1" }
     delivery: { rollback: "one-click" }
     connectors:
       - { role: "design source", connector: "[ORG]AIOC-PPD release port", access_managed_in: "panel" }   # the grant is signed at the tool gateway as connect-external-port
@@ -156,10 +160,10 @@ card:
       - { role: "source of record", connector: "[ORG]AIOC-SL output socket", access_managed_in: "panel" }      # as above (Protocol §13, item 5)
     gateway: { metering_id: "<per-AIOC metering id>" }
   full_name: "Delivery and Implementation"
-  version: "0.1.0"
-  lineage: { id: "[ORG]AIOC-DI", version: "0.1.0", relation: "original" }
+  version: "0.1.1"
+  lineage: { id: "[ORG]AIOC-DI", version: "0.1.1", relation: "original" }
   lifecycle_state: "designed"
-  blueprint_version: "v0.1.0"
+  blueprint_version: "v0.1.1"
   template_version: "v1.5.0"
   accountable_to: "[ORG]CELL-TMS"         # example code of the Cell carrying [ORG]HOAC-TM (Naming Standard R15); never a Cell inside this AIOC
   top_cell: "[ORG]CELL-DDL"
@@ -174,7 +178,7 @@ card:
     - { id: "di-transition", name: "Transition plan and go-live criteria", tags: ["delivery"] }
     - { id: "di-answers", name: "Answers grounded in the decided design, with verified citations", tags: ["delivery", "assurance"] }
   ports:
-    - { unit: "[ORG]AIOC-DI", port: "ai-in", direction: "input", type: "AI", identification: "technical-key", accepted_content: ["release notice", "source reference", "needs answer", "needs status"], authority_limit: "read only, within the scopes signed for the PPD and Source Lifecycle connections", audit_trail: "unit register; the serve logs of [ORG]AIOC-PPD and [ORG]AIOC-SL", required_tests: ["TEST-DI v1"], enforcement: "shared-gateway-outside-unit" }
+    - { unit: "[ORG]AIOC-DI", port: "ai-in", direction: "input", type: "AI", identification: "technical-key", accepted_content: ["release notice", "return answer", "source reference", "needs answer", "needs status"], authority_limit: "read only, within the scopes signed for the PPD and Source Lifecycle connections; return answers on the PPD and TOM connections", audit_trail: "unit register; the serve logs of [ORG]AIOC-PPD and [ORG]AIOC-SL", required_tests: ["TEST-DI v1"], enforcement: "shared-gateway-outside-unit" }
     - { unit: "[ORG]AIOC-DI", port: "ai-out", direction: "output", type: "AI", identification: "technical-key", accepted_content: ["return", "needs request", "missing report", "needs status", "launch package filing"], authority_limit: "returns, requests, reports and filings only; files only its own packages and design reports; never an instruction to a person", audit_trail: "Work Item record and the unit register", required_tests: ["TEST-DI v1"], enforcement: "shared-gateway-outside-unit" }
     - { unit: "[ORG]AIOC-DI", port: "hu-in", direction: "input", type: "HU", identification: "live-human-sign-in-at-gateway", accepted_content: ["run request from the Requesting Authority's Cell (references only)", "a question from a position about how the organisation works (never a source)", "a decision of a deciding position on a row of the Decision Package", "run control and configuration from the DI Delivery Lead (never a source)"], authority_limit: "the signer's authority_scope; nothing received here is a source", audit_trail: "Office record", required_tests: ["TEST-DI v1"], enforcement: "shared-gateway-outside-unit" }
     - { unit: "[ORG]AIOC-DI", port: "hu-out", direction: "output", type: "HU", identification: "live-human-sign-in-at-gateway", accepted_content: ["answer to the asking position", "run brief to the DI Delivery Lead", "ruling sheets to the DI Delivery Lead", "Decision Package rows to the deciding positions", "filing notice to the Requesting Authority's Cell"], authority_limit: "information and proposals only; never a decision, an instruction or a question about a person", audit_trail: "Office record", required_tests: ["TEST-DI v1"], enforcement: "shared-gateway-outside-unit" }
@@ -221,14 +225,14 @@ The blueprint writes `[ORG]` for the organisation's prefix (Naming Standard R13)
 | `[ORG]AIOC-OCO` | `<filled>` |
 | The Charter of this `[ORG]AION` | `<code>` |
 | The Cell carrying `[ORG]HOAC-TM` | `<code>` |
-| The Library blueprint this core is made from | 49GAION Delivery and Implementation, part card `v1` (proposed); its Protocol section (proposed) |
+| The Library blueprint this core is made from | 49GAION Delivery and Implementation, part card `v1`; its Protocol section (§20); this text is its mother blueprint |
 | **The Requesting Authority**: the position that asks for the delivery work and decides the launch package | `<code of the human Cell carrying [ORG]HOAC-GOV>`, or of a human Cell carrying a HOAC label whose `authority_scope`, delegated by that Cell under `delegate-authority`, covers these decisions (Standard §4.2, items 5 and 8; §4.4, item 8). It is a position, never this AIOC's Delivery Lead |
 | **The deciding positions** | position codes set by the Requesting Authority (`deciding_positions`): the position that decides go or no-go; the counsel position for each jurisdiction; the finance position. Each is a position of the organisation's decided design, never of this AIOC |
 | **The DI Delivery Lead position** | a HOAC position (`[ORG]HOAC-ACS`), a legal persona. Who occupies it is top management's own mechanism; this AIOC never sees it |
 | **The design source** | `[ORG]AIOC-PPD`: it hands over its decided release directly, and receives this AIOC's returns on it |
 | **The operating model** | `[ORG]AIOC-TOM`: its decided release is read by reference from Source Lifecycle; it receives this AIOC's returns on it |
 | **The source of record** | `[ORG]AIOC-SL`: every other source, every question to the organisation, and every filing |
-| **The engine register** | held at the tool gateway, in the Charter (Standard §4.4, item 11); read as `[ORG]AIOC-TOM` reads it (TOM blueprint `v0.4.1`, Annex E.12) |
+| **The engine register** | held at the tool gateway, in the Charter (Standard §4.4, item 11); read as `[ORG]AIOC-TOM` reads it (TOM blueprint `v0.5.0`, Annex E.12) |
 
 ### 2.2 Placement
 
@@ -320,7 +324,7 @@ TEST-DI-DCS v1 · result `NOT_RUN`
 
 ### 4.3 Input socket
 #### Definition
-Default, with this AIOC's standard format, the **Input Pack**, as in the TOM blueprint `v0.4.1` §4.3, parts 1 to 3 and 6 to 8, read with these changes:
+Default, with this AIOC's standard format, the **Input Pack**, as in the TOM blueprint `v0.5.0` §4.3, parts 1 to 3 and 6 to 8, read with these changes:
 1. **Three kinds of input.** The **releases** (mode A): the decided PPD Release, by manifest and parts, from the release notice, and the decided TOM Release it names, read by reference from Source Lifecycle. The **outside design** (mode B): a source in Source Lifecycle, cut into atoms and labelled once (TOM Annex B, carried). The **other sources**: by reference from Source Lifecycle's output socket.
 2. **A release is read, never atomised as a source.** Its elements keep their own IDs. Every element of this AIOC's output traces to a release element or a source atom.
 3. **The release check.** A release is admitted only when its manifest validates, its final status is decided, and its hash equals the copy filed in Source Lifecycle; the PPD Release must name the TOM Release it was designed from, and that release must pass the same check. Otherwise nothing of it is used, and a return goes back with the failed condition.
@@ -423,7 +427,7 @@ TEST-DI-DD v1 and TEST-DI-DDM v1 · result `NOT_RUN`
 ### 5.2 Needs Requests
 
 #### Definition
-As in the TOM blueprint `v0.4.1` §5.2, carried, with these changes. What this AIOC typically asks for: the jurisdictions and entities in scope; existing procedures, forms and templates; the systems in use; known legal obligations; the dates the organisation has in mind for launch. Each request names the gap, procedure, brief or criterion it is for. One decision per row; at most `rows_per_pass` rows per pass. A request never names a person. Done when: each request ends answered by reference, or with another outcome of the needs-answer contract.
+As in the TOM blueprint `v0.5.0` §5.2, carried, with these changes. What this AIOC typically asks for: the jurisdictions and entities in scope; existing procedures, forms and templates; the systems in use; known legal obligations; the dates the organisation has in mind for launch. Each request names the gap, procedure, brief or criterion it is for. One decision per row; at most `rows_per_pass` rows per pass. A request never names a person. Done when: each request ends answered by reference, or with another outcome of the needs-answer contract.
 #### Process (SOP)
 As carried: the Pods raise needs candidates; the Chief of Staff batches, reviews (RPa), sends, waits, and admits each answer through the Input socket as a new pack version.
 #### Role card
@@ -655,7 +659,7 @@ TEST-DI-DA v1 and the tests of its Cells · result `NOT_RUN`
 ### 5.9 Independent Review
 
 #### Definition
-The Review Panel rule of the TOM blueprint `v0.4.1` §5.8, carried as `[ORG]AIOC-PPD` carries it (PPD blueprint `v0.3.0` §5.9): several engines from two or more families review each locked output, alone first, then in a short debate held to quotes; code settles; the DI Delivery Lead rules only on what stays contested; the Chief of Staff never rules, dismisses, downgrades or lowers. This AIOC's review points: RP0 (P0), RP1 (design map and return drafts), RP2 (gap report and health check), RP3 (procedures, briefs, plan and criteria), RP4 (the package, before filing), and RPa (each needs pass). Done when: as carried.
+The Review Panel rule of the TOM blueprint `v0.5.0` §5.8, carried as `[ORG]AIOC-PPD` carries it (PPD blueprint `v0.3.0` §5.9): several engines from two or more families review each locked output, alone first, then in a short debate held to quotes; code settles; the DI Delivery Lead rules only on what stays contested; the Chief of Staff never rules, dismisses, downgrades or lowers. This AIOC's review points: RP0 (P0), RP1 (design map and return drafts), RP2 (gap report and health check), RP3 (procedures, briefs, plan and criteria), RP4 (the package, before filing), and RPa (each needs pass). Done when: as carried.
 #### Process (SOP)
 As carried.
 #### Role card
@@ -675,7 +679,7 @@ TEST-DI-DR v1 and the tests of its Cells · result `NOT_RUN`
 | Outputs | the Decision Package (Annex A.8); the launch package manifest and its parts; the filing receipt; the notice to the deciding positions |
 | Performed by | the Chief of Staff, by code steps; the DI Delivery Lead attests the method |
 | Done when | T4 and T5 (§5.0) |
-| Rules | 1. **Every element is decided** by its deciding position: `ACCEPT`, `CORRECT` or `REJECT`. Silence, or approval of a whole package, decides nothing (TOM blueprint `v0.4.1`, `docs/CARRIED-RULES.md` §5, carried). 2. **Inserted by a position.** No draft of this AIOC enters a live record, log or plan of the organisation unless a position inserts it (the ladder, level 1). 3. **Plain words.** The Decision Package states the unknowns, the assumptions, the open returns and the blocking gaps in plain words. 4. **Frozen and content-addressed.** The manifest lists every part by hash, every pack version, the design it was made from (IDs and manifest hashes) and every return. 5. **The package lint.** No person's name; no amount; no final legal text; every brief marked; every citation verified. 6. **Filed.** The package is filed into Source Lifecycle as a source of origin kind `delivery and implementation`, read back by hash, and announced to the deciding positions. 7. **The trace query.** Code resolves any artefact to its design element, its deciding position and its decision, and back (FR-33). |
+| Rules | 1. **Every element is decided** by its deciding position: `ACCEPT`, `CORRECT` or `REJECT`. Silence, or approval of a whole package, decides nothing (TOM blueprint `v0.5.0`, `docs/CARRIED-RULES.md` §5, carried). 2. **Inserted by a position.** No draft of this AIOC enters a live record, log or plan of the organisation unless a position inserts it (the ladder, level 1). 3. **Plain words.** The Decision Package states the unknowns, the assumptions, the open returns and the blocking gaps in plain words. 4. **Frozen and content-addressed.** The manifest lists every part by hash, every pack version, the design it was made from (IDs and manifest hashes) and every return. 5. **The package lint.** No person's name; no amount; no final legal text; every brief marked; every citation verified. 6. **Filed.** The package is filed into Source Lifecycle as a source of origin kind `delivery and implementation`, read back by hash, and announced to the deciding positions. 7. **The trace query.** Code resolves any artefact to its design element, its deciding position and its decision, and back (FR-33). |
 
 #### Process (SOP)
 1. **Chief of Staff**: generate the Decision Package; obtain the Delivery Lead's attestation of T0 to T3 → *Decision Package*.
@@ -695,8 +699,8 @@ TEST-DI-DCS v1 (cases 40, 41) · result `NOT_RUN`
 - **`[ORG]AIOC-PPD`.** The design source, linked directly.
   - **Routes.** Release notices arrive through the Input socket. Returns leave as Work Items through the output port, each also filed into Source Lifecycle.
   - **The connection.** Signed by the `[ORG]HOAC-ACS` position over `[ORG]AIOC-PPD` as `connect-external-port`, with two scopes: read its decided releases; send returns. A revocation cuts it at the gateway at once and holds the run.
-- **`[ORG]AIOC-TOM`.** Its decided release is read by reference from Source Lifecycle. Returns on it leave through a connection signed over `[ORG]AIOC-TOM`, scope: send returns only.
-- **Loops.** A return is a Work Item to the stage that made the release. That stage answers with a new release notice or the Requesting Authority with a decision; it never opens a new item back to this AIOC, so the chain never loops (Protocol §4.6, item 2).
+- **`[ORG]AIOC-TOM`.** Its decided release is read by reference from Source Lifecycle. Returns on it leave through a connection signed over `[ORG]AIOC-TOM`, scope: send returns and receive their answers (TOM blueprint `v0.5.0`, §5.10).
+- **Loops.** A return is a Work Item to the stage that made the release. That stage answers it on that Work Item: by a new release (announced, for PPD, by a new release notice) or by a decision of the Requesting Authority; it never opens a new item back to this AIOC, so the chain never loops (Protocol §4.6, item 2). Every return ends (Annex B).
 - **`[ORG]AIOC-SL`.** The source of record, and the only route to any person in the organisation about the organisation. The connection (Protocol §13, item 5) has three scopes: read; needs requests; write only this AIOC's own packages and design reports (its returns).
 - **The organisation's positions.** Questions arrive through the HU input port and answers leave through the HU output port, to the asking position only. Decision Package rows go to the deciding positions the same way.
 - **Work Items.**
@@ -719,14 +723,14 @@ TEST-DI-DCS v1 (cases 40, 41) · result `NOT_RUN`
 - **References, not copies.** Atom text and release text are held only in the run workspace. Records store IDs and hashes.
 - **Questions.** A question is recorded by ID, with the asking position's code and the answer's citations; its text stays in the run workspace.
 - **Revocation or reclassification.** On a notice from Source Lifecycle or a design stage, the run is held and its workspace copies are sealed.
-- **Engine ceilings.** No atom or release part is sent to an engine whose confidentiality ceiling is below its level (TOM blueprint `v0.4.1` §5.8, rule 17, carried).
+- **Engine ceilings.** No atom or release part is sent to an engine whose confidentiality ceiling is below its level (TOM blueprint `v0.5.0` §5.8, rule 17, carried).
 
 ## 8. Tools and the shared AI gateway
 
 | Tool | Existing shared tool, or new | If new: asked of the builder as |
 |---|---|---|
-| The PPD connection (release notice in, returns out) | new on both sides | a change to `[ORG]AIOC-PPD` proposed through OCO (`upstream/PROPOSALS.md`, item 1) |
-| The TOM return connection | new on both sides | a change to `[ORG]AIOC-TOM` proposed through OCO (`upstream/PROPOSALS.md`, item 2) |
+| The PPD connection (release notice in, returns out, answers in) | made on the PPD side in the PPD blueprint `v0.4.0` (`upstream/PROPOSALS.md`, item 1) | build items in the code project |
+| The TOM return connection (returns out, answers in) | made on the TOM side in the TOM blueprint `v0.5.0` (`upstream/PROPOSALS.md`, item 2) | build items in the code project |
 | The Source Lifecycle connection | existing in `[ORG]AIOC-SL`; the origin kind `delivery and implementation` is new | a change to `[ORG]AIOC-SL` proposed through OCO (`upstream/PROPOSALS.md`, item 3) |
 | The code steps: the socket and the release check; the design-map checks; the code checks of Annex F; the procedure trace check; the brief lint; the citation resolver; the package manifest and lint; the trace query | new in this AIOC's code project, one build item per step, each with its tests | build items in the code project |
 | The schemas of Annex A | field lists in Annex A, made into schemas before the first run; returns use the Library contract `library/contracts/design-return.schema.json` of `49GAION-protocol` | build items in the code project |
@@ -739,8 +743,8 @@ TEST-DI-DCS v1 (cases 40, 41) · result `NOT_RUN`
 
 | Tool role | Connector | Access managed in | Part card version |
 |---|---|---|---|
-| design source | `[ORG]AIOC-PPD` release port | Panel; the grant is signed at the tool gateway as `connect-external-port` | 49GAION Process and Position Design, v2 (proposed) |
-| returns to the operating model | `[ORG]AIOC-TOM` return port | Panel; as above | 49GAION Target Operating Model, v1 (proposed) |
+| design source | `[ORG]AIOC-PPD` release port | Panel; the grant is signed at the tool gateway as `connect-external-port` | 49GAION Process and Position Design, v2 |
+| returns to the operating model | `[ORG]AIOC-TOM` return port | Panel; as above | 49GAION Target Operating Model, v1 |
 | source of record | `[ORG]AIOC-SL` output socket | Panel; as above | 49GAION Source Lifecycle, v1 |
 
 **Mechanism register.** Read on 15 October 2026. A row is never deleted.
@@ -768,9 +772,9 @@ The cases are written in `tests/TEST-DI.md`. Cases 1 to 17 are the Library's TES
 
 | Part | Test ID and version | Cases of TEST-DI v1 | Evidence level | Last run | Result |
 |---|---|---|---|---|---|
-| `[ORG]AIOC-DI` (whole) | TEST-DI v1 | all (1–47) | MEASURED | — | `NOT_RUN` |
+| `[ORG]AIOC-DI` (whole) | TEST-DI v1 | all (1–48) | MEASURED | — | `NOT_RUN` |
 | `[ORG]CELL-DDL` DI Delivery Lead | TEST-DI-DDL v1 | DDL-1 to DDL-5 | MEASURED | — | `NOT_RUN` |
-| `[ORG]CELL-DCS` Chief of Staff (with Office, Input socket, Needs Requests, Decision Package and Filing) | TEST-DI-DCS v1 | 1, 4, 8, 10–13, 15–22, 25, 40–44, 46 | MEASURED | — | `NOT_RUN` |
+| `[ORG]CELL-DCS` Chief of Staff (with Office, Input socket, Needs Requests, Decision Package and Filing) | TEST-DI-DCS v1 | 1, 4, 8, 10–13, 15–22, 25, 40–44, 46, 48 | MEASURED | — | `NOT_RUN` |
 | Panel | default Panel test | — | MEASURED | — | `NOT_RUN` |
 | `[ORG]POD-DD` Diagnosis | TEST-DI-DD v1 | 2, 3, 5, 23, 24, 26–29 | MEASURED | — | `NOT_RUN` |
 | `[ORG]CELL-DDM` Design Mapper | TEST-DI-DDM v1 | 2, 23, 24 | MEASURED | — | `NOT_RUN` |
@@ -815,7 +819,7 @@ The cases are written in `tests/TEST-DI.md`. Cases 1 to 17 are the Library's TES
 1. **The Back office converses with humans** (`converses_with_humans: true`). Reason: answering positions' questions is part of this AIOC's purpose (FR-15). Bounds: it answers only from the decided design, to the asking position only; a question is never a source (§5.8).
 2. **The Chief of Staff never asks the organisation's people anything about the organisation.** It reaches the organisation for facts only through the Chief of Staff of `[ORG]AIOC-SL`. Reason: as for `[ORG]AIOC-TOM` (its §11, item 1).
 3. **Two design sources.** The template's Input socket takes sources. This one also takes a design release directly from `[ORG]AIOC-PPD`, by reference and hash, and returns defects to it and to `[ORG]AIOC-TOM`. Reason: the chain of design stages (49GAION Standard §3.1, items 3 to 6).
-4. **Rules carried by reference.** The review rule, labels and decision rules are carried from the TOM blueprint `v0.4.1` by section (Annex E).
+4. **Rules carried by reference.** The review rule, labels and decision rules are carried from the TOM blueprint `v0.5.0` by section (Annex E).
 
 ## 12. Lessons and proposals to the mother
 
@@ -833,7 +837,7 @@ Every decision that only a human seat can take is listed here once. Silence deci
 | H-01 | Name the Requesting Authority's Cell: the GOV Cell itself, or a human Cell to which it delegates these decisions (`delegate-authority`) | GOV | none: T0 fails |
 | H-02 | **Top management's own mechanism.** Arrange the DI Delivery Lead position and any HOAC position added to this AIOC. Nothing of who occupies them enters this blueprint | the Cell carrying `[ORG]HOAC-TM` | the position is vacant: the AIOC does not join |
 | H-03 | Install `[ORG]AIOC-DI` (`create-or-install-unit`); its `change-parent`; its `restart-stopped-unit` | the Cell carrying `[ORG]HOAC-TM` | none |
-| H-04 | Accept the PPD, TOM and Source Lifecycle changes this AIOC needs (`upstream/PROPOSALS.md`, items 1 to 3) | the Cell carrying `[ORG]HOAC-TM`, made through OCO | required before joining |
+| H-04 | Accept the PPD, TOM and Source Lifecycle changes this AIOC needs (`upstream/PROPOSALS.md`, items 1 to 3; items 1 and 2 are made in the PPD blueprint `v0.4.0` and the TOM blueprint `v0.5.0`) | the Cell carrying `[ORG]HOAC-TM`, made through OCO | required before joining |
 | H-05 | The connection grants to PPD, TOM and Source Lifecycle (`connect-external-port`), their widening and revocation | the `[ORG]HOAC-ACS` positions over those AIOCs | none: T0 fails |
 | H-06 | `modes_enabled`, `gap_bars`, `answer_bars`, `return_round_deadline`, `return_rounds_max`, `review_budget_per_run`, `reduced_review_permitted` and the AIOC's `budget_cap` | the Cell carrying `[ORG]HOAC-TM` | none: must be set; reduced review `no` |
 | H-07 | The permission ladder: each class of action and its level, at most level 1 in this version | the owner position | every class at level 1 |
@@ -844,7 +848,7 @@ Every decision that only a human seat can take is listed here once. Silence deci
 | H-12 | Inside a run: rule on contested `MATERIAL` findings; accept a reduced level within H-06; approve a second run; attest T0 to T3 | the DI Delivery Lead | none taken; the step waits |
 | H-13 | Create `<org>aioc-di-records` and `-records-restricted`, recorded first (Naming Standard R9) | the Cell carrying `[ORG]HOAC-TM` | before the first run |
 | H-14 | Send the drafts of `upstream/` to the parts they concern | GOV | after this blueprint is approved |
-| H-15 | Approve this blueprint `v0.1.0` as the design of `[ORG]AIOC-DI`, slice 1 | the human hub | it stays a draft; nothing is installed |
+| H-15 | Approve this blueprint `v0.1.1` as the design of `[ORG]AIOC-DI`, slice 1 | the human hub | it stays a draft; nothing is installed |
 
 **Money:** the budget cap and the review budget (H-06); every amount in a brief is a decision of the organisation, never this AIOC's. **People:** this AIOC prepares for positions, never for who fills them; the go or no-go is the deciding position's (H-11). **Legal:** every brief goes to the counsel position of its jurisdiction before any decision.
 
@@ -853,6 +857,7 @@ Every decision that only a human seat can take is listed here once. Silence deci
 | Blueprint version | Date | Change | Template version | Commit |
 |---|---|---|---|---|
 | v0.1.0 | 2026-10-15 | First blueprint of `[ORG]AIOC-DI`, the mother text of the Library part 49GAION Delivery and Implementation (proposed): slice 1, the gap audit and the launch essentials; modes A and B; five stages; answers with verified citations; returns under the Library contract; TEST-DI v1 | v1.5.0 at `e89ed1d` | this commit |
+| v0.1.1 | 2026-10-16 | Receives the answers to its returns, from `[ORG]AIOC-PPD` and `[ORG]AIOC-TOM` (a `tom-in` port and Annex B, rule 5), and the release notice of `[ORG]AIOC-PPD` under its contract (`decisions/DR-0002`); a return set aside carries its elements forward on the stated basis; the Library texts are merged, no longer proposed; the TOM rules are carried from the TOM blueprint `v0.5.0`. TEST-DI v1, case 48 | v1.5.0 at `e89ed1d` | this pull request |
 
 ---
 
@@ -894,7 +899,7 @@ The parts inside this AIOC (`docs/CELLS-AND-PODS.md` of `49GAION-aioc`). The rol
 | Code | Kind | Type | Filler kind | HOAC label | Parent | Fixed test (owner) | External ports |
 |---|---|---|---|---|---|---|---|
 | `[ORG]CELL-DDL` | CELL | Human Seat | human | `[ORG]HOAC-ACS` | `[ORG]AIOC-DI` | TEST-DI-DDL v1 (the Cell carrying `[ORG]HOAC-TM`) | none |
-| `[ORG]CELL-DCS` | CELL | AI Chief of Staff | ai | none | `[ORG]AIOC-DI` | TEST-DI-DCS v1 (`[ORG]CELL-DDL`) | `ppd-in`, `ppd-out`, `tom-out`, `sl-in`, `sl-out` |
+| `[ORG]CELL-DCS` | CELL | AI Chief of Staff | ai | none | `[ORG]AIOC-DI` | TEST-DI-DCS v1 (`[ORG]CELL-DDL`) | `ppd-in`, `ppd-out`, `tom-out`, `tom-in`, `sl-in`, `sl-out` |
 | `[ORG]POD-DD` | POD | AI Pod | — | none | `[ORG]AIOC-DI` | TEST-DI-DD v1 (`[ORG]CELL-DDL`) | — |
 | `[ORG]CELL-DDM` | CELL | AI Agent | ai | none | `[ORG]POD-DD` | TEST-DI-DDM v1 (`[ORG]CELL-DDL`) | none |
 | `[ORG]CELL-DGA` | CELL | AI Agent | ai | none | `[ORG]POD-DD` | TEST-DI-DGA v1 (`[ORG]CELL-DDL`) | none |
@@ -915,8 +920,8 @@ The parts inside this AIOC (`docs/CELLS-AND-PODS.md` of `49GAION-aioc`). The rol
 parts:
   defaults:
     accountable_to: "[ORG]CELL-DDL"
-    card_version: "v0.1.0"
-    version: "0.1.0"
+    card_version: "v0.1.1"
+    version: "0.1.1"
     lifecycle_state: "designed"
     test_version: "v1"
     test_owner: "[ORG]CELL-DDL"
@@ -949,15 +954,16 @@ parts:
       type: "AI Chief of Staff"
       filler_kind: "ai"
       cell_kind: "chief-of-staff-cell"
-      test: { id: "TEST-DI-DCS", cases: "1, 4, 8, 10-13, 15-22, 25, 40-44, 46" }
-      ai_in: ["release notice", "source reference", "needs answer", "needs status", "needs candidate", "return draft", "locked outputs of the Pods", "settled review records", "verified answer"]
+      test: { id: "TEST-DI-DCS", cases: "1, 4, 8, 10-13, 15-22, 25, 40-44, 46, 48" }
+      ai_in: ["release notice", "return answer", "source reference", "needs answer", "needs status", "needs candidate", "return draft", "locked outputs of the Pods", "settled review records", "verified answer"]
       ai_out: ["Input Pack version", "dispatch to a Pod", "review packet", "return", "needs request", "missing report", "Decision Package", "launch package filing"]
       hu_in: ["run request from the Requesting Authority's Cell (references only)", "a question from a position (never a source)", "a decision of a deciding position", "run control from the DI Delivery Lead"]
       hu_out: ["answer to the asking position", "Decision Package rows to the deciding positions", "run brief and ruling sheets to the DI Delivery Lead", "filing notice to the Requesting Authority's Cell"]
       external_ports:
-        - { port: "ppd-in", direction: "input", accepted_content: ["release notice"], authority_limit: "the read scope signed under connect-external-port over [ORG]AIOC-PPD", audit_trail: "unit register; serve log of [ORG]AIOC-PPD" }
+        - { port: "ppd-in", direction: "input", accepted_content: ["release notice", "return answer"], authority_limit: "the read scope signed under connect-external-port over [ORG]AIOC-PPD", audit_trail: "unit register; serve log of [ORG]AIOC-PPD" }
         - { port: "ppd-out", direction: "output", accepted_content: ["return"], authority_limit: "returns only, under the scope signed over [ORG]AIOC-PPD", audit_trail: "unit register; the Work Item record" }
         - { port: "tom-out", direction: "output", accepted_content: ["return"], authority_limit: "returns only, under the scope signed over [ORG]AIOC-TOM", audit_trail: "unit register; the Work Item record" }
+        - { port: "tom-in", direction: "input", accepted_content: ["return answer"], authority_limit: "answers to this AIOC's returns only, under the scope signed over [ORG]AIOC-TOM", audit_trail: "unit register; the Work Item record" }
         - { port: "sl-in", direction: "input", accepted_content: ["source reference", "needs answer", "needs status"], authority_limit: "the read scope signed under connect-external-port over [ORG]AIOC-SL", audit_trail: "unit register; serve log of [ORG]AIOC-SL" }
         - { port: "sl-out", direction: "output", accepted_content: ["needs request", "missing report", "return filing", "launch package filing"], authority_limit: "the request and write scope signed over [ORG]AIOC-SL: this AIOC's own packages and design reports only", audit_trail: "unit register; serve log of [ORG]AIOC-SL" }
       bot:
@@ -1030,6 +1036,7 @@ Returns follow the Library's design return contract, `library/contracts/design-r
 2. A return never changes the release.
 3. It is answered by a new decided release, or by a decision of the Requesting Authority; each answer that does not end it opens the next round. Past `return_round_deadline` or `return_rounds_max`, it goes to the Requesting Authority, who answers it or sets it aside on a stated basis (`known defect` or `decided assumption`).
 4. In mode B there is no release to return to: a defect of the outside design is a gap (§5.3).
+5. **Answers.** A return answer arrives on the connection of the stage that made the release and is recorded on the return. An answer by release makes a new pack version through the release check and re-opens only the work that cites a changed element. A return set aside by decision lets its touched elements go forward on the stated basis, each marked `known defect` or `decided assumption` with the decision reference, and listed in the Decision Package in plain words. *(v0.1.1.)*
 
 **Done when.** The return validates; it is sent and filed with one hash; its touched elements show `held: return open`; it ends in a status other than `open`.
 
@@ -1056,7 +1063,7 @@ Returns follow the Library's design return contract, `library/contracts/design-r
 
 ## Annex E. What is carried from the Target Operating Model blueprint
 
-This AIOC carries these rules from the blueprint of `[ORG]AIOC-TOM` `v0.4.1` (its writing repository, `<org>aioc-tom`), by section, not by copy, as `[ORG]AIOC-PPD` `v0.3.0` carries them (its Annex E). A change there reaches this AIOC only when this annex pins the new version.
+This AIOC carries these rules from the blueprint of `[ORG]AIOC-TOM` `v0.5.0` (its writing repository, `<org>aioc-tom`), by section, not by copy, as `[ORG]AIOC-PPD` `v0.3.0` carries them (its Annex E). A change there reaches this AIOC only when this annex pins the new version.
 
 | Rule | TOM section | Read here with |
 |---|---|---|
