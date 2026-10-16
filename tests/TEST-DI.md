@@ -84,6 +84,11 @@ Cases 9, 11 (level 2), 13 (the projection), 14 and 16 (the full export) test fea
 
 48. A release notice of `[ORG]AIOC-PPD` is admitted only when it validates against PPD's release notice contract and names the TOM Release the PPD Release rests on; a return answer from PPD or TOM is admitted only on the connection of the stage that made the release and is recorded on the return; an answer by release re-opens only the work that cites a changed element; a return set aside carries its touched elements forward, each marked `known defect` or `decided assumption` with the decision reference and listed in the Decision Package; no return this AIOC sent stays `open` when the fixtures run to the end.
 
+## Cases 49 and 50 · the value case and priority (added 16 October 2026, before any use, `decisions/DR-0003`)
+
+49. From a sample TOM Release with a value case and decided priorities, the design map carries every value-case entry and every element's priority by reference, byte-identical to the release; a baseline `unknown` or a target `not set` stays so; a seeded design map that changes an entry, or sets a baseline, a target or a priority, fails RP1.
+50. The transition plan's waves follow the decided priority the releases carry (`must`, then `should`, then `could`), then critical processes first; a wave out of that order states why, and the order is decided with the plan; a seeded plan that departs without a reason fails RP3.
+
 ## The DI Delivery Lead's seat test
 
 - DDL-1. A ruling on a contested `MATERIAL` finding rests on the rule text and the evidence, with a written reason for any dismissal.

@@ -7,7 +7,7 @@ blueprint:
   organisation: "<organisation>"          # filled in each organisation's own copy
   type: "specialised"
   org_aion: "[ORG]AION"
-  blueprint_version: "v0.1.1"
+  blueprint_version: "v0.1.2"
   status: "draft"
   template:
     name: "49GAION AIOC Blueprint Template"
@@ -26,9 +26,9 @@ blueprint:
     functional: ["Intake and Design Map", "Needs Requests", "Gap Audit", "Health Check", "Procedure Writing", "Briefs", "Transition and Go-live Criteria", "Answers", "Independent Review", "Decision Package and Filing"]
 ```
 
-# Blueprint · `[ORG]AIOC-DI` · Delivery and Implementation · `v0.1.1`
+# Blueprint · `[ORG]AIOC-DI` · Delivery and Implementation · `v0.1.2`
 
-**Draft, 15 October 2026; v0.1.1, 16 October 2026, receives the answers to its returns and the release notices of `[ORG]AIOC-PPD` under their contracts, now that both stages before it are connected (`decisions/DR-0002`).** Written by `[ORG]AIOC-OCO` on the directions recorded in `decisions/DR-0001`. This is the first blueprint of Delivery and Implementation, written for any organisation as the mother text of the Library part 49GAION Delivery and Implementation. It covers **slice 1 of 4, the gap audit and the launch essentials**, which the governing seat started first. The later slices are named in §5.0 and come as later versions. Every rule rests on a 49GAION text, on the blueprints of `[ORG]AIOC-PPD` or `[ORG]AIOC-TOM` (cited by section and version), or on the product requirements of this part (`PRD-[ORG]AIOC-DI-001` v0.4, in its code project), or is new here and marked **New**. Nothing here has run. Every fixed test reads `NOT_RUN`.
+**Draft, 15 October 2026; v0.1.1, 16 October 2026, receives the answers to its returns and the release notices of `[ORG]AIOC-PPD` under their contracts, now that both stages before it are connected (`decisions/DR-0002`). v0.1.2, 16 October 2026, carries the value case of the TOM Release and the priority of each element, unchanged, and orders the transition waves by priority (`decisions/DR-0003`; TOM blueprint `v0.6.0`, Annex H).** Written by `[ORG]AIOC-OCO` on the directions recorded in `decisions/DR-0001` to `decisions/DR-0003`. This is the first blueprint of Delivery and Implementation, written for any organisation as the mother text of the Library part 49GAION Delivery and Implementation. It covers **slice 1 of 4, the gap audit and the launch essentials**, which the governing seat started first. The later slices are named in §5.0 and come as later versions. Every rule rests on a 49GAION text, on the blueprints of `[ORG]AIOC-PPD` or `[ORG]AIOC-TOM` (cited by section and version), or on the product requirements of this part (`PRD-[ORG]AIOC-DI-001` v0.4, in its code project), or is new here and marked **New**. Nothing here has run. Every fixed test reads `NOT_RUN`.
 
 > **Delivery and Implementation in one page**
 >
@@ -78,7 +78,7 @@ blueprint:
 | Template | 49GAION AIOC Blueprint Template `v1.5.0` at `e89ed1d` (with the `v1.6.0` additions) |
 | Mother | 49GAION Delivery and Implementation, part card `v1`. This text is its mother blueprint |
 | Product requirements | `PRD-[ORG]AIOC-DI-001` v0.4, approved by the governing seat on 15 October 2026; its requirement IDs (`FR-n`, `NFR-n`) are cited here |
-| Blueprint version and status | `v0.1.1` · draft · slice 1 |
+| Blueprint version and status | `v0.1.2` · draft · slice 1 |
 | Accountable seat (`[ORG]HOAC-ACS`) | the DI Delivery Lead, `[ORG]CELL-DDL`, a HOAC position. Who occupies it is top management's own mechanism; this AIOC never sees it (Standard §1.1, items 9 and 10) |
 | Reports to | the Cell carrying `[ORG]HOAC-TM` |
 | Writing repository | `<org>aioc-di`, plus `-records` for an organisation's runs and `-records-restricted` for run records that touch a Strictly confidential source (Naming Standard R9). The mother text lives in a public repository and holds no organisation data |
@@ -101,7 +101,7 @@ card:
   inner_units: ["[ORG]CELL-DDL", "[ORG]CELL-DCS", "[ORG]POD-DD", "[ORG]POD-DP", "[ORG]POD-DA", "[ORG]POD-DR"]
   type: "specialised"
   org_aion: "[ORG]AION"
-  card_version: "v0.1.1"
+  card_version: "v0.1.2"
   input_door: "Chief of Staff"
   wake: { method: "queue", verified: false }
   receives:
@@ -152,7 +152,7 @@ card:
   anatomy:
     panel: { health: { tests: true, metrics: ["stuck", "returned", "late", "run state", "returns open", "returns answered", "needs open", "needs past deadline", "gaps by tier", "gaps by state", "procedures by state", "briefs by state", "go-live criteria by state", "answers given", "answers 'I do not know'", "citations refused by the verifier", "reviews held", "review budget used"] } }
     back_office: { converses_with_humans: true, hosts: ["Chief of Staff", "Office"], protocol_traffic: true }
-    definition: { location: "<org>aioc-di, blueprint/DI-BLUEPRINT.md", version: "v0.1.1" }
+    definition: { location: "<org>aioc-di, blueprint/DI-BLUEPRINT.md", version: "v0.1.2" }
     delivery: { rollback: "one-click" }
     connectors:
       - { role: "design source", connector: "[ORG]AIOC-PPD release port", access_managed_in: "panel" }   # the grant is signed at the tool gateway as connect-external-port
@@ -160,10 +160,10 @@ card:
       - { role: "source of record", connector: "[ORG]AIOC-SL output socket", access_managed_in: "panel" }      # as above (Protocol §13, item 5)
     gateway: { metering_id: "<per-AIOC metering id>" }
   full_name: "Delivery and Implementation"
-  version: "0.1.1"
-  lineage: { id: "[ORG]AIOC-DI", version: "0.1.1", relation: "original" }
+  version: "0.1.2"
+  lineage: { id: "[ORG]AIOC-DI", version: "0.1.2", relation: "original" }
   lifecycle_state: "designed"
-  blueprint_version: "v0.1.1"
+  blueprint_version: "v0.1.2"
   template_version: "v1.5.0"
   accountable_to: "[ORG]CELL-TMS"         # example code of the Cell carrying [ORG]HOAC-TM (Naming Standard R15); never a Cell inside this AIOC
   top_cell: "[ORG]CELL-DDL"
@@ -398,7 +398,7 @@ Five stages (§5.0) are performed by the Input socket (§4.3: S0) and these capa
 | Outputs | the design map (Annex A.1); returns (Annex B) |
 | Performed by | the Design Mapper (`[ORG]CELL-DDM`) in the Diagnosis Pod (`[ORG]POD-DD`); the Chief of Staff sends |
 | Done when | T1 (§5.0); for a return, Annex B, Done when |
-| Rules | 1. **Mode A: account for everything.** Every process, position, unit, decision, control and forum of the PPD Release in scope, and every role and hand-off of the TOM Release it names, is recorded `used`, `returned` (with the return) or `out of scope` (with the reason). 2. **Mode B: map, never rewrite.** Each element of the outside design is mapped onto the structure of a PPD release (process, step, decision, position, unit, forum, policy, measure), or marked `not mapped` with the reason. The author's words are kept as cited; the map records how each element was read, never what it should have said. A missing element is a gap (§5.3), never an invention. 3. **Never changed.** A release is read as decided. A defect becomes a return of one kind (Annex B) to the stage that made it: a process, position, unit or control defect to `[ORG]AIOC-PPD`; an operating-model defect to `[ORG]AIOC-TOM`. 4. **The touched elements wait.** Only the elements a return touches are held; the rest of the work goes on. 5. **The loop ends.** A return counts its rounds. Past `return_round_deadline` or `return_rounds_max`, it goes to the Requesting Authority, who answers it, or sets it aside and lets the affected elements go forward on a stated basis, a known defect or a decided assumption (49GAION Standard §3.1, items 4 and 6). 6. **Not a person.** A return names release parts, elements and fact-types, never a person. |
+| Rules | 1. **Mode A: account for everything.** Every process, position, unit, decision, control and forum of the PPD Release in scope, and every role and hand-off of the TOM Release it names, is recorded `used`, `returned` (with the return) or `out of scope` (with the reason). **New** in v0.1.2: the value case of that TOM Release and the decided priority of each element (TOM blueprint `v0.6.0`, Annex H.6, H.7) are recorded in the design map as they stand, by reference, never changed; a baseline `unknown` or a target `not set` stays so. They are carried for the register of value of slice 2, which starts from them. 2. **Mode B: map, never rewrite.** Each element of the outside design is mapped onto the structure of a PPD release (process, step, decision, position, unit, forum, policy, measure), or marked `not mapped` with the reason. The author's words are kept as cited; the map records how each element was read, never what it should have said. A missing element is a gap (§5.3), never an invention. 3. **Never changed.** A release is read as decided. A defect becomes a return of one kind (Annex B) to the stage that made it: a process, position, unit or control defect to `[ORG]AIOC-PPD`; an operating-model defect to `[ORG]AIOC-TOM`. 4. **The touched elements wait.** Only the elements a return touches are held; the rest of the work goes on. 5. **The loop ends.** A return counts its rounds. Past `return_round_deadline` or `return_rounds_max`, it goes to the Requesting Authority, who answers it, or sets it aside and lets the affected elements go forward on a stated basis, a known defect or a decided assumption (49GAION Standard §3.1, items 4 and 6). 6. **Not a person.** A return names release parts, elements and fact-types, never a person. |
 
 #### Process (SOP)
 1. **Design Mapper**: read the release or the outside design, element by element → *design map, draft* (evidence: one row per element).
@@ -594,7 +594,7 @@ TEST-DI-DBW v1 · result `NOT_RUN`
 | Outputs | the transition plan and the go-live criteria (Annex A.6) |
 | Performed by | the Transition Planner (`[ORG]CELL-DTP`) in the Preparation Pod (`[ORG]POD-DP`) |
 | Done when | T3 (§5.0) |
-| Rules | 1. **The plan.** Waves; the cut-over runbook by position, each step with its rollback; a parallel run where the organisation decides one; communication by position; the position that chairs the transition review. For a new organisation, the waves are the order in which units and processes start. 2. **Consultation first.** Where law requires information or consultation before changes to work organisation, the plan carries a consultation step before any transition notice, and the design stays a proposal until it ends (counsel confirms per jurisdiction). 3. **The criteria.** Each go-live criterion names what must be true, its measure, its evidence source, and a threshold that is a decision row. They include that every blocking gap is closed or decided, and an adoption criterion: each critical process can be completed by its positions unaided, judged at process level. 4. **Who decides.** The go or no-go deciding position is named. This AIOC never decides go or no-go, and never marks a criterion met by its own report. |
+| Rules | 1. **The plan.** Waves; the cut-over runbook by position, each step with its rollback; a parallel run where the organisation decides one; communication by position; the position that chairs the transition review. For a new organisation, the waves are the order in which units and processes start. **New** in v0.1.2: the waves follow the decided priority the releases carry (`must`, then `should`, then `could`), then critical processes first; a wave that departs from that order states why, and the order is decided with the plan. 2. **Consultation first.** Where law requires information or consultation before changes to work organisation, the plan carries a consultation step before any transition notice, and the design stays a proposal until it ends (counsel confirms per jurisdiction). 3. **The criteria.** Each go-live criterion names what must be true, its measure, its evidence source, and a threshold that is a decision row. They include that every blocking gap is closed or decided, and an adoption criterion: each critical process can be completed by its positions unaided, judged at process level. 4. **Who decides.** The go or no-go deciding position is named. This AIOC never decides go or no-go, and never marks a criterion met by its own report. |
 
 #### Process (SOP)
 1. **Transition Planner**: draft the plan and the criteria → *drafts*.
@@ -772,18 +772,18 @@ The cases are written in `tests/TEST-DI.md`. Cases 1 to 17 are the Library's TES
 
 | Part | Test ID and version | Cases of TEST-DI v1 | Evidence level | Last run | Result |
 |---|---|---|---|---|---|
-| `[ORG]AIOC-DI` (whole) | TEST-DI v1 | all (1–48) | MEASURED | — | `NOT_RUN` |
+| `[ORG]AIOC-DI` (whole) | TEST-DI v1 | all (1–50) | MEASURED | — | `NOT_RUN` |
 | `[ORG]CELL-DDL` DI Delivery Lead | TEST-DI-DDL v1 | DDL-1 to DDL-5 | MEASURED | — | `NOT_RUN` |
 | `[ORG]CELL-DCS` Chief of Staff (with Office, Input socket, Needs Requests, Decision Package and Filing) | TEST-DI-DCS v1 | 1, 4, 8, 10–13, 15–22, 25, 40–44, 46, 48 | MEASURED | — | `NOT_RUN` |
 | Panel | default Panel test | — | MEASURED | — | `NOT_RUN` |
-| `[ORG]POD-DD` Diagnosis | TEST-DI-DD v1 | 2, 3, 5, 23, 24, 26–29 | MEASURED | — | `NOT_RUN` |
-| `[ORG]CELL-DDM` Design Mapper | TEST-DI-DDM v1 | 2, 23, 24 | MEASURED | — | `NOT_RUN` |
+| `[ORG]POD-DD` Diagnosis | TEST-DI-DD v1 | 2, 3, 5, 23, 24, 26–29, 49 | MEASURED | — | `NOT_RUN` |
+| `[ORG]CELL-DDM` Design Mapper | TEST-DI-DDM v1 | 2, 23, 24, 49 | MEASURED | — | `NOT_RUN` |
 | `[ORG]CELL-DGA` Gap Auditor | TEST-DI-DGA v1 | 5, 26–28 | MEASURED | — | `NOT_RUN` |
 | `[ORG]CELL-DHC` Health Checker | TEST-DI-DHC v1 | 29 | MEASURED | — | `NOT_RUN` |
-| `[ORG]POD-DP` Preparation | TEST-DI-DP v1 | 6, 30–35 | MEASURED | — | `NOT_RUN` |
+| `[ORG]POD-DP` Preparation | TEST-DI-DP v1 | 6, 30–35, 50 | MEASURED | — | `NOT_RUN` |
 | `[ORG]CELL-DPW` Procedure Writer | TEST-DI-DPW v1 | 6, 30, 31 | MEASURED | — | `NOT_RUN` |
 | `[ORG]CELL-DBW` Brief Writer | TEST-DI-DBW v1 | 6, 32 | MEASURED | — | `NOT_RUN` |
-| `[ORG]CELL-DTP` Transition Planner | TEST-DI-DTP v1 | 8, 33–35 | MEASURED | — | `NOT_RUN` |
+| `[ORG]CELL-DTP` Transition Planner | TEST-DI-DTP v1 | 8, 33–35, 50 | MEASURED | — | `NOT_RUN` |
 | `[ORG]POD-DA` Answers | TEST-DI-DA v1 | 7, 36–38 | MEASURED | — | `NOT_RUN` |
 | `[ORG]CELL-DAG` Answer Guide | TEST-DI-DAG v1 | 7, 36, 37 | MEASURED | — | `NOT_RUN` |
 | `[ORG]CELL-DCV` Citation Verifier | TEST-DI-DCV v1 | 36, 38 | MEASURED | — | `NOT_RUN` |
@@ -827,6 +827,7 @@ One dated line per lesson, each written without any organisation's details. Noth
 
 1. 2026-10-15 · A decided design is not yet a working organisation: procedures, briefs for counsel and finance, the transition plan and the go-live criteria are still needed, and the organisation needs a stage beside it through launch and after. Test questions added: cases 30 to 35. This text is the mother.
 2. 2026-10-15 · An assistant that answers questions about how an organisation works must answer only from the decided design, with a second engine checking each citation, and say "I do not know" otherwise. Test questions added: cases 36 to 38.
+3. 2026-10-16 · The value an organisation expects from its new design, and the order in which its parts matter, are decided before this stage; this stage carries them unchanged and starts its rollout and its register of value from them. Test questions added: cases 49 and 50 (`decisions/DR-0003`).
 
 ## 13. For the `[ORG]HOAC-ACS` seat, and every decision only a human seat can take
 
@@ -848,7 +849,7 @@ Every decision that only a human seat can take is listed here once. Silence deci
 | H-12 | Inside a run: rule on contested `MATERIAL` findings; accept a reduced level within H-06; approve a second run; attest T0 to T3 | the DI Delivery Lead | none taken; the step waits |
 | H-13 | Create `<org>aioc-di-records` and `-records-restricted`, recorded first (Naming Standard R9) | the Cell carrying `[ORG]HOAC-TM` | before the first run |
 | H-14 | Send the drafts of `upstream/` to the parts they concern | GOV | after this blueprint is approved |
-| H-15 | Approve this blueprint `v0.1.1` as the design of `[ORG]AIOC-DI`, slice 1 | the human hub | it stays a draft; nothing is installed |
+| H-15 | Approve this blueprint `v0.1.2` as the design of `[ORG]AIOC-DI`, slice 1 | the human hub | it stays a draft; nothing is installed |
 
 **Money:** the budget cap and the review budget (H-06); every amount in a brief is a decision of the organisation, never this AIOC's. **People:** this AIOC prepares for positions, never for who fills them; the go or no-go is the deciding position's (H-11). **Legal:** every brief goes to the counsel position of its jurisdiction before any decision.
 
@@ -858,6 +859,7 @@ Every decision that only a human seat can take is listed here once. Silence deci
 |---|---|---|---|---|
 | v0.1.0 | 2026-10-15 | First blueprint of `[ORG]AIOC-DI`, the mother text of the Library part 49GAION Delivery and Implementation (proposed): slice 1, the gap audit and the launch essentials; modes A and B; five stages; answers with verified citations; returns under the Library contract; TEST-DI v1 | v1.5.0 at `e89ed1d` | this commit |
 | v0.1.1 | 2026-10-16 | Receives the answers to its returns, from `[ORG]AIOC-PPD` and `[ORG]AIOC-TOM` (a `tom-in` port and Annex B, rule 5), and the release notice of `[ORG]AIOC-PPD` under its contract (`decisions/DR-0002`); a return set aside carries its elements forward on the stated basis; the Library texts are merged, no longer proposed; the TOM rules are carried from the TOM blueprint `v0.5.0`. TEST-DI v1, case 48 | v1.5.0 at `e89ed1d` | this pull request |
+| v0.1.2 | 2026-10-16 | Carries the value case of the TOM Release and each element's decided priority in the design map, unchanged (§5.1 rule 1; A.1), for the register of value of slice 2; the transition waves follow the decided priority (A.6); Annex D item 13; Annex E pins TOM `v0.6.0` (`decisions/DR-0003`). TEST-DI v1, cases 49 and 50, added before any use | v1.5.0 | this pull request |
 
 ---
 
@@ -920,8 +922,8 @@ The parts inside this AIOC (`docs/CELLS-AND-PODS.md` of `49GAION-aioc`). The rol
 parts:
   defaults:
     accountable_to: "[ORG]CELL-DDL"
-    card_version: "v0.1.1"
-    version: "0.1.1"
+    card_version: "v0.1.2"
+    version: "0.1.2"
     lifecycle_state: "designed"
     test_version: "v1"
     test_owner: "[ORG]CELL-DDL"
@@ -969,20 +971,20 @@ parts:
       bot:
         allowed_actions: ["dispatch Cells of this AIOC", "build Input Pack versions through the code steps", "lock outputs and run code steps", "draw review engines and run the review code steps", "write the run record", "send reviewed returns and file them in [ORG]AIOC-SL", "send needs requests and Missing Reports to [ORG]AIOC-SL", "send verified answers to the asking position", "send Decision Package rows to the deciding positions", "file a package whose elements are decided"]
         ask_first_actions: ["a second run in parallel", "a budget above the cap", "a reduced review level", "any change to configuration", "anything outside its role card"]
-    - { code: "[ORG]CELL-DDM", full_name: "DI Design Mapper", role: "Design Mapper", parent: "[ORG]POD-DD", type: "AI Agent", filler_kind: "ai", test: { id: "TEST-DI-DDM", cases: "2, 23, 24" }, ai_in: ["Input Pack version"], ai_out: ["design map", "return draft", "needs candidate"], bot: { allowed_actions: ["read a release or map an outside design, element by element", "draft returns with their evidence"], ask_first_actions: ["anything outside its role card"] } }
+    - { code: "[ORG]CELL-DDM", full_name: "DI Design Mapper", role: "Design Mapper", parent: "[ORG]POD-DD", type: "AI Agent", filler_kind: "ai", test: { id: "TEST-DI-DDM", cases: "2, 23, 24, 49" }, ai_in: ["Input Pack version"], ai_out: ["design map", "return draft", "needs candidate"], bot: { allowed_actions: ["read a release or map an outside design, element by element", "draft returns with their evidence"], ask_first_actions: ["anything outside its role card"] } }
     - { code: "[ORG]CELL-DGA", full_name: "DI Gap Auditor", role: "Gap Auditor", parent: "[ORG]POD-DD", type: "AI Agent", filler_kind: "ai", test: { id: "TEST-DI-DGA", cases: "5, 26-28" }, ai_in: ["design map", "check record", "Input Pack version"], ai_out: ["gap report draft", "needs candidate"], bot: { allowed_actions: ["judge the checks code cannot decide", "write each gap with its consequence, evidence, fix and route"], ask_first_actions: ["anything outside its role card"] } }
     - { code: "[ORG]CELL-DHC", full_name: "DI Health Checker", role: "Health Checker", parent: "[ORG]POD-DD", type: "AI Agent", filler_kind: "ai", test: { id: "TEST-DI-DHC", cases: "29" }, ai_in: ["design map", "Input Pack version"], ai_out: ["health check draft"], bot: { allowed_actions: ["answer the health checklist with evidence"], ask_first_actions: ["anything outside its role card"] } }
     - { code: "[ORG]CELL-DPW", full_name: "DI Procedure Writer", role: "Procedure Writer", parent: "[ORG]POD-DP", type: "AI Agent", filler_kind: "ai", test: { id: "TEST-DI-DPW", cases: "6, 30, 31" }, ai_in: ["process records of the design", "decided gap routes"], ai_out: ["procedure drafts", "gap candidate"], bot: { allowed_actions: ["write procedures, forms and templates under each process"], ask_first_actions: ["anything outside its role card"] } }
     - { code: "[ORG]CELL-DBW", full_name: "DI Brief Writer", role: "Brief Writer", parent: "[ORG]POD-DP", type: "AI Agent", filler_kind: "ai", test: { id: "TEST-DI-DBW", cases: "6, 32" }, ai_in: ["design registers", "decided gap routes", "jurisdictions and entities in scope"], ai_out: ["brief drafts", "needs candidate"], bot: { allowed_actions: ["write briefs for counsel and finance"], ask_first_actions: ["anything outside its role card"] } }
-    - { code: "[ORG]CELL-DTP", full_name: "DI Transition Planner", role: "Transition Planner", parent: "[ORG]POD-DP", type: "AI Agent", filler_kind: "ai", test: { id: "TEST-DI-DTP", cases: "8, 33-35" }, ai_in: ["units, positions, processes and the crosswalk of the design", "decided gap routes"], ai_out: ["transition plan draft", "go-live criteria draft"], bot: { allowed_actions: ["draft the transition plan and the go-live criteria"], ask_first_actions: ["anything outside its role card"] } }
+    - { code: "[ORG]CELL-DTP", full_name: "DI Transition Planner", role: "Transition Planner", parent: "[ORG]POD-DP", type: "AI Agent", filler_kind: "ai", test: { id: "TEST-DI-DTP", cases: "8, 33-35, 50" }, ai_in: ["units, positions, processes and the crosswalk of the design", "decided gap routes"], ai_out: ["transition plan draft", "go-live criteria draft"], bot: { allowed_actions: ["draft the transition plan and the go-live criteria"], ask_first_actions: ["anything outside its role card"] } }
     - { code: "[ORG]CELL-DAG", full_name: "DI Answer Guide", role: "Answer Guide", parent: "[ORG]POD-DA", type: "AI Agent", filler_kind: "ai", test: { id: "TEST-DI-DAG", cases: "7, 36, 37" }, ai_in: ["question by ID", "the admitted design and the filed package"], ai_out: ["answer draft with citations"], bot: { allowed_actions: ["draft answers only from the decided design, with citations"], ask_first_actions: ["anything outside its role card"] } }
     - { code: "[ORG]CELL-DCV", full_name: "DI Citation Verifier", role: "Citation Verifier", parent: "[ORG]POD-DA", type: "AI Agent", filler_kind: "ai", test: { id: "TEST-DI-DCV", cases: "36, 38" }, ai_in: ["draft with citations", "the cited elements and spans"], ai_out: ["verification record"], bot: { allowed_actions: ["check that each citation resolves and supports its claim"], ask_first_actions: ["anything outside its role card"] } }
     - { code: "[ORG]CELL-DBRA", full_name: "DI Blind Reviewer A", role: "Blind Reviewer A", parent: "[ORG]POD-DR", type: "AI Agent", filler_kind: "ai", test: { id: "TEST-DI-DBRA", cases: "39" }, ai_in: ["review packet", "collated findings of its review"], ai_out: ["review card", "positions on findings"], bot: { allowed_actions: ["write its own review card", "state its own positions on the findings of its review"], ask_first_actions: ["anything outside its role card"] } }
     - { code: "[ORG]CELL-DBRB", full_name: "DI Blind Reviewer B", role: "Blind Reviewer B", parent: "[ORG]POD-DR", type: "AI Agent", filler_kind: "ai", test: { id: "TEST-DI-DBRB", cases: "39" }, ai_in: ["review packet", "collated findings of its review"], ai_out: ["review card", "positions on findings"], bot: { allowed_actions: ["write its own review card", "state its own positions on the findings of its review"], ask_first_actions: ["anything outside its role card"] } }
     - { code: "[ORG]CELL-DBRC", full_name: "DI Blind Reviewer C", role: "Blind Reviewer C", parent: "[ORG]POD-DR", type: "AI Agent", filler_kind: "ai", test: { id: "TEST-DI-DBRC", cases: "39" }, ai_in: ["review packet", "collated findings of its review"], ai_out: ["review card", "positions on findings"], bot: { allowed_actions: ["write its own review card", "state its own positions on the findings of its review"], ask_first_actions: ["anything outside its role card"] } }
   pods:
-    - { code: "[ORG]POD-DD", full_name: "DI Diagnosis", type: "AI Pod", inner_units: ["[ORG]CELL-DDM", "[ORG]CELL-DGA", "[ORG]CELL-DHC"], top_cell: "[ORG]CELL-DGA", test: { id: "TEST-DI-DD", cases: "2, 3, 5, 23, 24, 26-29" }, ai_in: ["Input Pack version"], ai_out: ["design map", "gap report", "health check", "return draft"] }
-    - { code: "[ORG]POD-DP", full_name: "DI Preparation", type: "AI Pod", inner_units: ["[ORG]CELL-DPW", "[ORG]CELL-DBW", "[ORG]CELL-DTP"], top_cell: "[ORG]CELL-DPW", test: { id: "TEST-DI-DP", cases: "6, 30-35" }, ai_in: ["design map", "decided gap routes"], ai_out: ["procedures", "briefs", "transition plan", "go-live criteria"] }
+    - { code: "[ORG]POD-DD", full_name: "DI Diagnosis", type: "AI Pod", inner_units: ["[ORG]CELL-DDM", "[ORG]CELL-DGA", "[ORG]CELL-DHC"], top_cell: "[ORG]CELL-DGA", test: { id: "TEST-DI-DD", cases: "2, 3, 5, 23, 24, 26-29, 49" }, ai_in: ["Input Pack version"], ai_out: ["design map", "gap report", "health check", "return draft"] }
+    - { code: "[ORG]POD-DP", full_name: "DI Preparation", type: "AI Pod", inner_units: ["[ORG]CELL-DPW", "[ORG]CELL-DBW", "[ORG]CELL-DTP"], top_cell: "[ORG]CELL-DPW", test: { id: "TEST-DI-DP", cases: "6, 30-35, 50" }, ai_in: ["design map", "decided gap routes"], ai_out: ["procedures", "briefs", "transition plan", "go-live criteria"] }
     - { code: "[ORG]POD-DA", full_name: "DI Answers", type: "AI Pod", inner_units: ["[ORG]CELL-DAG", "[ORG]CELL-DCV"], top_cell: "[ORG]CELL-DAG", test: { id: "TEST-DI-DA", cases: "7, 36-38" }, ai_in: ["question by ID", "drafts with citations"], ai_out: ["verified answer", "verification record"] }
     - { code: "[ORG]POD-DR", full_name: "DI Review", type: "AI Pod", inner_units: ["[ORG]CELL-DBRA", "[ORG]CELL-DBRB", "[ORG]CELL-DBRC"], top_cell: "[ORG]CELL-DBRA", test: { id: "TEST-DI-DR", cases: "39" }, ai_in: ["review packet"], ai_out: ["review cards and positions"] }
 ```
@@ -1009,7 +1011,7 @@ No code of this blueprint uses the suffix `DI` alone, so no part can be read as 
 
 Every part is a versioned, content-addressed object. Every element carries an ID, its provenance (`stated`, `inferred`, `unresolved` or `assumed`, as in TOM Annex B, carried), its basis (design element IDs and source atom IDs, at least one) and, after T4, its decision reference. JSON Schemas are made from these lists before the first run and may add nothing.
 
-**A.1 Design map** (run record, summarised in the package). Mode A: one row per element in scope: `element_id`, `part`, `state` (`used`, `returned`, `out of scope`), `return_id`, `reason`. Mode B: one row per element of the outside design: `source_atom`, `read_as` (process, step, decision, position, unit, forum, policy, measure), `maps_to` (an ID in this map's own structure), `state` (`mapped`, `not mapped`, `out of scope`), `reason`.
+**A.1 Design map** (run record, summarised in the package). Mode A: one row per element in scope: `element_id`, `part`, `state` (`used`, `returned`, `out of scope`), `return_id`, `reason`, `priority` (as the release decided it, or none). The value case carried (**New** in v0.1.2): per entry of the TOM Release's value case, `entry_id` (`VC-n`), `outcome_ref`, `measures` (each with its baseline and target references, or `unknown` and `not set`, as the release states them) and `elements`, by reference, unchanged. Mode B: one row per element of the outside design: `source_atom`, `read_as` (process, step, decision, position, unit, forum, policy, measure), `maps_to` (an ID in this map's own structure), `state` (`mapped`, `not mapped`, `out of scope`), `reason`.
 
 **A.2 Gap report** (package part). Per check: `check_id` (Annex F), `tier`, `result` (`met`, `gap`, `unknown`), `evidence`. Per gap: `gap_id` (`GAP-n`), `check_id`, `tier` (`blocking`, `completeness`), `elements`, `consequence`, `evidence`, `proposed_fix`, `route` (`return` with its ID; `decision` with its row; `prepare` with the S3 output that answers it), `state`.
 
@@ -1019,7 +1021,7 @@ Every part is a versioned, content-addressed object. Every element carries an ID
 
 **A.5 Briefs** (package part). Per brief: `brief_id` (`BRF-n`); `kind` (`policy`, `pay structure`, `contract and offer templates`, `authority instruments`, `obligations register`, `control matrix`, `systems, data and suppliers`); `entity`; `jurisdiction` (or `unknown`, then `outline only`); `serves` (design element IDs); `what_it_must_achieve`; `known`; `open_questions`; `decisions_needed` (never an amount); `addressed_to` (a position code from `deciding_positions`); `mark` ("Draft, not legal advice"); `citations`.
 
-**A.6 Transition plan and go-live criteria** (package part). Plan: `waves[]` {units, processes, order}; `cut_over[]` {step, position, rollback}; `parallel_run` (decided or none); `communication[]` {to position, what, when}; `consultation` {required by (per counsel), before which notice}; `review_chair` (position). Criteria: per criterion: `criterion_id` (`GLC-n`), `what_must_be_true`, `measure`, `evidence_source`, `threshold` (decision reference), `kind` (`blocking gaps closed`, `adoption`, `readiness`, other); `go_no_go_position`.
+**A.6 Transition plan and go-live criteria** (package part). Plan: `waves[]` {units, processes, order, `priority` (the highest decided priority of what the wave starts), `departs_because` (when it departs from the order of priority)}; `cut_over[]` {step, position, rollback}; `parallel_run` (decided or none); `communication[]` {to position, what, when}; `consultation` {required by (per counsel), before which notice}; `review_chair` (position). Criteria: per criterion: `criterion_id` (`GLC-n`), `what_must_be_true`, `measure`, `evidence_source`, `threshold` (decision reference), `kind` (`blocking gaps closed`, `adoption`, `readiness`, other); `go_no_go_position`.
 
 **A.7 Answer record** (run record). `question_id`; `asking_position`; `answer` or `I do not know`; `citations[]` {`element_id`, `version`, `span_sha256`}; `verifier` {engine family, result}; `sent_at`.
 
@@ -1060,10 +1062,11 @@ Returns follow the Library's design return contract, `library/contracts/design-r
 10. Mark a go-live criterion met on its own report.
 11. Grade its own work: no Cell reviews its own output, and the Chief of Staff rules on nothing.
 12. Act on a type of the Human Floor signature list, at any level.
+13. Change a value case, or set a baseline, a target or a priority of its own (TOM blueprint `v0.6.0`, Annex H.6, H.7).
 
 ## Annex E. What is carried from the Target Operating Model blueprint
 
-This AIOC carries these rules from the blueprint of `[ORG]AIOC-TOM` `v0.5.0` (its writing repository, `<org>aioc-tom`), by section, not by copy, as `[ORG]AIOC-PPD` `v0.3.0` carries them (its Annex E). A change there reaches this AIOC only when this annex pins the new version.
+This AIOC carries these rules from the blueprint of `[ORG]AIOC-TOM` `v0.6.0` (its writing repository, `<org>aioc-tom`), by section, not by copy, as `[ORG]AIOC-PPD` `v0.3.0` carries them (its Annex E). A change there reaches this AIOC only when this annex pins the new version.
 
 | Rule | TOM section | Read here with |
 |---|---|---|
@@ -1074,6 +1077,7 @@ This AIOC carries these rules from the blueprint of `[ORG]AIOC-TOM` `v0.5.0` (it
 | Decision rules: one decision per row; global assent is never approval; "don't know"; the weak-approval signal; delegated, not decided | `docs/CARRIED-RULES.md` §5 | — |
 | The Review Panel rule | §5.8, rules 1 to 20 | the review points of §5.9; "DI Delivery Lead" for "TOM Design Lead" |
 | The engine register | Annex E.12 | — |
+| The value case and the priority of each element | Annex H.6, H.7 | §5.1, rule 1; the transition plan's waves; Annex A.1 and A.6 of this blueprint |
 
 ## Annex F. The gap checks
 
