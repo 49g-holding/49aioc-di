@@ -1,6 +1,6 @@
 # Proposals upstream
 
-**`[ORG]AIOC-DI` v0.1.0 · 15 October 2026.** Drafts by `[ORG]AIOC-OCO`. Nothing is sent without the governing seat's word.
+**`[ORG]AIOC-DI` v0.1.0 · 15 October 2026.** Drafts by `[ORG]AIOC-OCO`. Nothing is sent without the governing seat's word. State on 16 October 2026: item 1 is made in the PPD blueprint `v0.4.0`; item 2 in the TOM blueprint `v0.5.0`; item 3 is made in the Source Lifecycle blueprint at its next version.
 
 ## 1. To `[ORG]AIOC-PPD`: a release notice to this stage, and its returns
 

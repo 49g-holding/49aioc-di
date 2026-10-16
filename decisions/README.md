@@ -7,5 +7,6 @@ One `DR-####` file per decided subject, numbered in order. A record file never c
 | Record | Date | Subject | Status |
 |---|---|---|---|
 | [`DR-0001`](DR-0001-di-separate-aioc-slice-one-first.md) | 2026-10-15 | Delivery and Implementation: a separate AIOC, slice 1 first | in force |
+| [`DR-0002`](DR-0002-answers-to-returns.md) | 2026-10-16 | DI v0.1.1: answers to its returns, and the PPD notice under its contract | in force |
 
 *Powered by 49GAION*
