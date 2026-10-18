@@ -18,4 +18,8 @@ Fifteen products that design, launch or run organisations were taken apart from 
 
 The product is built in four slices, smallest liability first. The governing seat started slice 1: the gap audit and the launch essentials, reading and proposing only.
 
+## Then complete
+
+On 18 October 2026 the governing seat directed that the stage be completed: the route and the map are written first, and each part is built and switched on in the order of the slices. Version 0.2.0 designs every requirement: the service after launch (accompany, operate, improve), the small business with no design, the ladder with its second level, and records of work read only through a projection that removes who did the work.
+
 *Powered by 49GAION*

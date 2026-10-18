@@ -5,11 +5,11 @@ full_name: DI Health Checker
 parent: '[ORG]POD-DD'
 accountable_to: '[ORG]CELL-DDL'
 type: AI Agent
-card_version: v0.1.2
-version: 0.1.2
+card_version: v0.2.0
+version: 0.2.0
 lineage:
   id: '[ORG]CELL-DHC'
-  version: 0.1.2
+  version: 0.2.0
   relation: original
 lifecycle_state: designed
 fixed_test:
@@ -26,6 +26,7 @@ ports:
   accepted_content:
   - design map
   - Input Pack version
+  - the living design, the logs and the measures
   authority_limit: as in its role card (blueprint §4-§5)
   audit_trail: the run record of [ORG]AIOC-DI
   required_tests:
