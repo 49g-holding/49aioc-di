@@ -7,7 +7,7 @@ blueprint:
   organisation: "<organisation>"          # filled in each organisation's own copy
   type: "specialised"
   org_aion: "[ORG]AION"
-  blueprint_version: "v0.2.0"
+  blueprint_version: "v0.2.1"
   status: "draft"
   template:
     name: "49GAION AIOC Blueprint Template"
@@ -26,9 +26,9 @@ blueprint:
     functional: ["Intake and Design Map", "Needs Requests", "Gap Audit", "Health Check", "Procedure Writing", "Briefs and Drafts", "Transition and Go-live Criteria", "Answers", "Independent Review", "Decision Package and Filing", "Light Design", "Implementation Plan", "Change Impact and Adoption", "Learning Paths", "Readiness and Go-live", "Problem Records", "Operating Rhythm", "Measures", "Value Register", "Versions and Checklists", "Process Watching", "Proposals", "Trials", "Hand-over and Mentor", "Export"]
 ```
 
-# Blueprint · `[ORG]AIOC-DI` · Delivery and Implementation · `v0.2.0`
+# Blueprint · `[ORG]AIOC-DI` · Delivery and Implementation · `v0.2.1`
 
-**Draft, 15 October 2026. v0.1.1 and v0.1.2, 16 October 2026: the answers to its returns, and the value case and priority carried unchanged (`decisions/DR-0002`, `DR-0003`). v0.2.0, 18 October 2026: complete, on the governing seat's direction to complete this stage (`decisions/DR-0004`).** Written by `[ORG]AIOC-OCO` on the directions recorded in `decisions/DR-0001` to `decisions/DR-0004`. This is the blueprint of Delivery and Implementation, written for any organisation as the mother text of the Library part 49GAION Delivery and Implementation. It now covers **all four slices** of the product requirements: the gap audit and the launch essentials (slice 1); accompanying the launch, with the operating rhythm (slice 2); improving the running organisation (slice 3); and the small business with no design (slice 4). The slices stay the order in which the parts are built and switched on (§5.0, "The slices"). Every rule rests on a 49GAION text, on the blueprints of `[ORG]AIOC-PPD` or `[ORG]AIOC-TOM` (cited by section and version), or on the product requirements of this part (`PRD-[ORG]AIOC-DI-001` v0.4, in its code project), or is new here and marked **New**. Nothing here has run. Every fixed test reads `NOT_RUN`.
+**Draft, 15 October 2026. v0.1.1 and v0.1.2, 16 October 2026: the answers to its returns, and the value case and priority carried unchanged (`decisions/DR-0002`, `DR-0003`). v0.2.0, 18 October 2026: complete, on the governing seat's direction to complete this stage (`decisions/DR-0004`). v0.2.1, 19 October 2026: the Chief of Staff takes its COS code `[ORG]CELL-COSDI` (`decisions/DR-0005`).** Written by `[ORG]AIOC-OCO` on the directions recorded in `decisions/DR-0001` to `decisions/DR-0004`. This is the blueprint of Delivery and Implementation, written for any organisation as the mother text of the Library part 49GAION Delivery and Implementation. It now covers **all four slices** of the product requirements: the gap audit and the launch essentials (slice 1); accompanying the launch, with the operating rhythm (slice 2); improving the running organisation (slice 3); and the small business with no design (slice 4). The slices stay the order in which the parts are built and switched on (§5.0, "The slices"). Every rule rests on a 49GAION text, on the blueprints of `[ORG]AIOC-PPD` or `[ORG]AIOC-TOM` (cited by section and version), or on the product requirements of this part (`PRD-[ORG]AIOC-DI-001` v0.4, in its code project), or is new here and marked **New**. Nothing here has run. Every fixed test reads `NOT_RUN`.
 
 > **Delivery and Implementation in one page**
 >
@@ -66,7 +66,7 @@ blueprint:
 | Description | "`[ORG]AIOC-DI` is `<organisation>`'s Delivery and Implementation core, built from 49GAION Delivery and Implementation" |
 | Kind | AIOC |
 | Parent | `<code of the Charter of this [ORG]AION>`; the cards use the example code `[ORG]AIOC-CH`. A top-level AIOC (Standard §1.7, item 13) |
-| Inner units | `[ORG]CELL-DDL`, `[ORG]CELL-DCS`, `[ORG]POD-DD`, `[ORG]POD-DP`, `[ORG]POD-DA`, `[ORG]POD-DR`, `[ORG]POD-DL`, `[ORG]POD-DO`, `[ORG]POD-DCI`: seven Pods with their twenty-five Cells, and two Cells directly under the AIOC (§17). No inner AIOC |
+| Inner units | `[ORG]CELL-DDL`, `[ORG]CELL-COSDI`, `[ORG]POD-DD`, `[ORG]POD-DP`, `[ORG]POD-DA`, `[ORG]POD-DR`, `[ORG]POD-DL`, `[ORG]POD-DO`, `[ORG]POD-DCI`: seven Pods with their twenty-five Cells, and two Cells directly under the AIOC (§17). No inner AIOC |
 | HOAC label | `[ORG]HOAC-ACS`, held by its top Cell, the DI Delivery Lead `[ORG]CELL-DDL` (`label_holder`) |
 | Accountable to | `<code of the Cell carrying [ORG]HOAC-TM>`; the cards use the example code `[ORG]CELL-TMS` (Naming Standard R15) |
 | Type | Specialised: the organisation needs its decided design taken into a running organisation (§16) |
@@ -77,7 +77,7 @@ blueprint:
 | Template | 49GAION AIOC Blueprint Template `v1.6.0`, at `acdcbe5` |
 | Mother | 49GAION Delivery and Implementation, part card `v1`. This text is its mother blueprint |
 | Product requirements | `PRD-[ORG]AIOC-DI-001` v0.4, approved by the governing seat on 15 October 2026; its requirement IDs (`FR-n`, `NFR-n`) are cited here |
-| Blueprint version and status | `v0.2.0` · draft · complete, slices 1 to 4 |
+| Blueprint version and status | `v0.2.1` · draft · complete, slices 1 to 4 |
 | Accountable seat (`[ORG]HOAC-ACS`) | the DI Delivery Lead, `[ORG]CELL-DDL`, a HOAC position. Who occupies it is top management's own mechanism; this AIOC never sees it (Standard §1.1, items 9 and 10) |
 | Reports to | the Cell carrying `[ORG]HOAC-TM` |
 | Writing repository | `<org>aioc-di`, plus `-records` for an organisation's runs and `-records-restricted` for run records that touch a Strictly confidential source (Naming Standard R9). The mother text lives in a public repository and holds no organisation data |
@@ -97,10 +97,10 @@ card:
   unit_kind: "AIOC"
   code: "[ORG]AIOC-DI"
   parent: "[ORG]AIOC-CH"                  # example code of the Charter, the root AIOC; only it has parent none (Standard §1.7, item 13)
-  inner_units: ["[ORG]CELL-DDL", "[ORG]CELL-DCS", "[ORG]POD-DD", "[ORG]POD-DP", "[ORG]POD-DA", "[ORG]POD-DR", "[ORG]POD-DL", "[ORG]POD-DO", "[ORG]POD-DCI"]
+  inner_units: ["[ORG]CELL-DDL", "[ORG]CELL-COSDI", "[ORG]POD-DD", "[ORG]POD-DP", "[ORG]POD-DA", "[ORG]POD-DR", "[ORG]POD-DL", "[ORG]POD-DO", "[ORG]POD-DCI"]
   type: "specialised"
   org_aion: "[ORG]AION"
-  card_version: "v0.2.0"
+  card_version: "v0.2.1"
   input_door: "Chief of Staff"
   wake: { method: "queue", verified: false }
   receives:
@@ -186,7 +186,7 @@ card:
   anatomy:
     panel: { health: { tests: true, metrics: ["stuck", "returned", "late", "run state", "returns open", "returns answered", "needs open", "needs past deadline", "gaps by tier", "gaps by state", "procedures by state", "briefs by state", "go-live criteria by state", "answers given", "answers 'I do not know'", "citations refused by the verifier", "reviews held", "review budget used", "tasks by state", "go-live criteria met, not met, unknown", "rehearsal defects open", "actions past their date", "risks and issues open", "milestone date changes", "packs built", "minutes awaiting preview", "versions due", "acknowledgements pending, by version", "initiatives by gate", "value planned and realised", "proposals by state", "trials running", "conformance by process", "hand-over items left", "ladder level by class"] } }
     back_office: { converses_with_humans: true, hosts: ["Chief of Staff", "Office"], protocol_traffic: true }
-    definition: { location: "<org>aioc-di, blueprint/DI-BLUEPRINT.md", version: "v0.2.0" }
+    definition: { location: "<org>aioc-di, blueprint/DI-BLUEPRINT.md", version: "v0.2.1" }
     delivery: { rollback: "one-click" }
     connectors:
       - { role: "design source", connector: "[ORG]AIOC-PPD release port", access_managed_in: "panel" }   # the grant is signed at the tool gateway as connect-external-port
@@ -195,10 +195,10 @@ card:
       - { role: "records of work", connector: "the projection owned by top management over the organisation's own tools", access_managed_in: "panel" }   # read only; signed as connect-external-port; off until Annex H holds
     gateway: { metering_id: "<per-AIOC metering id>" }
   full_name: "Delivery and Implementation"
-  version: "0.2.0"
-  lineage: { id: "[ORG]AIOC-DI", version: "0.2.0", relation: "original" }
+  version: "0.2.1"
+  lineage: { id: "[ORG]AIOC-DI", version: "0.2.1", relation: "original" }
   lifecycle_state: "designed"
-  blueprint_version: "v0.2.0"
+  blueprint_version: "v0.2.1"
   template_version: "v1.6.0"
   accountable_to: "[ORG]CELL-TMS"         # example code of the Cell carrying [ORG]HOAC-TM (Naming Standard R15); never a Cell inside this AIOC
   top_cell: "[ORG]CELL-DDL"
@@ -323,7 +323,7 @@ The blueprint writes `[ORG]` for the organisation's prefix (Naming Standard R13)
 | Position (standard title) | Purpose | Reports to | Run today by | Deputy |
 |---|---|---|---|---|
 | DI Delivery Lead | the accountable position of this AIOC and the owner of its path: owns the fixed tests of its parts; rules on contested review findings; accepts a reduced review level within the TM Cell's permission; attests the method. Answers for the method, never for the organisation's choices | the Cell carrying `[ORG]HOAC-TM` | a HOAC position (`[ORG]HOAC-ACS`); who occupies it is top management's own mechanism, never seen by this AIOC | as top management arranges (`appoint-acting-filler`, Standard §4.1, item 12) |
-| Chief of Staff | keep each run moving, honest and traced; the only door to PPD, TOM and Source Lifecycle | DI Delivery Lead | an agent (`[ORG]CELL-DCS`) | none; the run halts |
+| Chief of Staff | keep each run moving, honest and traced; the only door to PPD, TOM and Source Lifecycle | DI Delivery Lead | an agent (`[ORG]CELL-COSDI`) | none; the run halts |
 | Design Mapper | read a decided release, or map a design made elsewhere, and draft returns | Chief of Staff | an agent (`[ORG]CELL-DDM`) | none; the step halts |
 | Gap Auditor | run the gap checks in two tiers | Chief of Staff | an agent (`[ORG]CELL-DGA`) | none; the step halts |
 | Health Checker | run the organisation health check at entry | Chief of Staff | an agent (`[ORG]CELL-DHC`) | none; the step halts |
@@ -369,7 +369,7 @@ Default.
 #### Role card
 None while the form is a single Chief of Staff.
 #### Fixed test
-TEST-DI-DCS v1 (TEST-DI v1, case 44) · result `NOT_RUN`
+TEST-DI-COSDI v1 (TEST-DI v1, case 44) · result `NOT_RUN`
 
 ### 4.2 Chief of Staff
 #### Definition
@@ -399,7 +399,7 @@ Default, plus:
 |---|---|
 | Name | Chief of Staff |
 | Position and seat | the position Chief of Staff; accountable seat: the DI Delivery Lead (`[ORG]HOAC-ACS`) |
-| Performed by | an agent (`[ORG]CELL-DCS`, full name DI Chief of Staff) |
+| Performed by | an agent (`[ORG]CELL-COSDI`, full name DI Chief of Staff) |
 | Purpose | keep each run moving, honest and traced; be this AIOC's voice to the Delivery Lead and its only door to PPD, TOM, Source Lifecycle and the asking positions |
 | Authority limits | alone: dispatch, lock, record, run code steps, send reviewed returns and needs requests, send verified answers, file a package or a version whose elements are decided; send rows for decision, forum packs and notices; enter a draft a position inserted; apply a level-2 change within its signed class; run checklists; record acknowledgements; produce the export; needs the Delivery Lead: a second run in parallel, a budget above the cap, any change to configuration, a ruling on a finding, a reduced review level; never: ask a person anything about the organisation, change a design release, decide for a deciding position, enter a draft no position inserted, apply a change outside a signed class, read a record of work outside the projection, show a measure for a single position, rule on or dismiss a finding, sign, close a Work Item this AIOC performed |
 | Write location | the run record and this AIOC's Work Items |
@@ -407,10 +407,10 @@ Default, plus:
 | Escalation | to the Delivery Lead in one line, with evidence linked; a stop goes to the stop door, never through this Cell |
 | Tools and access | the PPD, TOM and Source Lifecycle connections, and the projection's connection while Annex H holds, through the tool gateway, within their signed scopes; the code steps of the code project; no credential in any instruction |
 | Deputy and cover | none; on failure the run halts and the Delivery Lead is told |
-| Fixed test and score | TEST-DI-DCS v1 (§9), plus the default Chief of Staff test |
+| Fixed test and score | TEST-DI-COSDI v1 (§9), plus the default Chief of Staff test |
 | Card version and status | v0.2.0 · draft |
 #### Fixed test
-TEST-DI-DCS v1 · result `NOT_RUN`
+TEST-DI-COSDI v1 · result `NOT_RUN`
 
 ### 4.3 Input socket
 #### Definition
@@ -427,7 +427,7 @@ Default, with this AIOC's standard format, the **Input Pack**, as in the TOM blu
 #### Process (SOP)
 Default (receive, identify, normalise, check, deliver), run by the Chief of Staff through the socket's code steps. A refused item comes back with its reason and never enters.
 #### Role card
-Default; performed by the Chief of Staff (`[ORG]CELL-DCS`) through the socket's code steps.
+Default; performed by the Chief of Staff (`[ORG]CELL-COSDI`) through the socket's code steps.
 #### Fixed test
 TEST-DI v1, cases 1, 2, 18 to 22, 51, 73, 74, 78, 92 · result `NOT_RUN`
 
@@ -794,7 +794,7 @@ TEST-DI-DR v1 and the tests of its Cells · result `NOT_RUN`
 Performed by the Chief of Staff (§4.2); the attestation by the DI Delivery Lead (§13, H-12).
 
 #### Fixed test
-TEST-DI-DCS v1 (cases 40, 41, 94) · result `NOT_RUN`
+TEST-DI-COSDI v1 (cases 40, 41, 94) · result `NOT_RUN`
 
 ### 5.11 Light Design
 
@@ -1148,7 +1148,7 @@ TEST-DI-DVT v1 · result `NOT_RUN`
 Performed by the Chief of Staff (§4.2), by code steps.
 
 #### Fixed test
-TEST-DI-DCS v1 (cases 69 to 71) · result `NOT_RUN`
+TEST-DI-COSDI v1 (cases 69 to 71) · result `NOT_RUN`
 
 ### 5.21 Process Watching
 
@@ -1318,7 +1318,7 @@ TEST-DI-DCM v1 · result `NOT_RUN`
 Performed by the Chief of Staff (§4.2), by code steps.
 
 #### Fixed test
-TEST-DI-DCS v1 (case 89) · result `NOT_RUN`
+TEST-DI-COSDI v1 (case 89) · result `NOT_RUN`
 
 ---
 
@@ -1423,7 +1423,7 @@ The cases are written in `tests/TEST-DI.md`. Cases 1 to 17 are the Library's TES
 |---|---|---|---|---|---|
 | `[ORG]AIOC-DI` (whole) | TEST-DI v1 | all (1–94) | MEASURED | — | `NOT_RUN` |
 | `[ORG]CELL-DDL` DI Delivery Lead | TEST-DI-DDL v1 | DDL-1 to DDL-5 | MEASURED | — | `NOT_RUN` |
-| `[ORG]CELL-DCS` Chief of Staff (with Office, Input socket, Needs Requests, Decision Package and Filing, Versions and Checklists, Export) | TEST-DI-DCS v1 | 1, 2, 4, 8, 10–13, 15–22, 25, 40–46, 48, 51, 55, 66, 69–71, 73, 74, 78, 83, 84, 86, 89, 92, 94 | MEASURED | — | `NOT_RUN` |
+| `[ORG]CELL-COSDI` Chief of Staff (with Office, Input socket, Needs Requests, Decision Package and Filing, Versions and Checklists, Export) | TEST-DI-COSDI v1 | 1, 2, 4, 8, 10–13, 15–22, 25, 40–46, 48, 51, 55, 66, 69–71, 73, 74, 78, 83, 84, 86, 89, 92, 94 | MEASURED | — | `NOT_RUN` |
 | Panel | default Panel test | — | MEASURED | — | `NOT_RUN` |
 | `[ORG]POD-DD` Diagnosis | TEST-DI-DD v1 | 2, 3, 5, 23, 24, 26–29, 49, 52–54, 81, 93 | MEASURED | — | `NOT_RUN` |
 | `[ORG]CELL-DDM` Design Mapper | TEST-DI-DDM v1 | 2, 23, 24, 49, 93 | MEASURED | — | `NOT_RUN` |
@@ -1521,7 +1521,7 @@ Every decision that only a human seat can take is listed here once. Silence deci
 | H-12 | Inside a run: rule on contested `MATERIAL` findings; accept a reduced level within H-06; approve a second run; attest T0 to T3 | the DI Delivery Lead | none taken; the step waits |
 | H-13 | Create `<org>aioc-di-records` and `-records-restricted`, recorded first (Naming Standard R9) | the Cell carrying `[ORG]HOAC-TM` | before the first run |
 | H-14 | Send the drafts of `upstream/` to the parts they concern | GOV | after this blueprint is approved |
-| H-15 | Approve this blueprint `v0.2.0` as the design of `[ORG]AIOC-DI`, slices 1 to 4 | the human hub | it stays a draft; nothing is installed |
+| H-15 | Approve this blueprint `v0.2.1` as the design of `[ORG]AIOC-DI`, slices 1 to 4 | the human hub | it stays a draft; nothing is installed |
 | H-16 | Open the service for a filed launch package, naming the parts switched on | Requesting Authority | none: no service |
 | H-17 | Process watching (Annex H): the impact assessment and its lawful basis; informing workers or their representatives where law requires; the projection and its connection (`connect-external-port`); then `process_watching` on | the data-protection position; the counsel position, on what the law requires; the Cell carrying `[ORG]HOAC-TM` | off |
 | H-18 | Each level-2 class, signed as `sign-standing-action-class`: reversible only, with no legal, pay or employment effect | the owner position | none: every class at level 1 |
@@ -1545,6 +1545,7 @@ Every decision that only a human seat can take is listed here once. Silence deci
 | v0.1.1 | 2026-10-16 | Receives the answers to its returns, from `[ORG]AIOC-PPD` and `[ORG]AIOC-TOM` (a `tom-in` port and Annex B, rule 5), and the release notice of `[ORG]AIOC-PPD` under its contract (`decisions/DR-0002`); a return set aside carries its elements forward on the stated basis; the Library texts are merged, no longer proposed; the TOM rules are carried from the TOM blueprint `v0.5.0`. TEST-DI v1, case 48 | v1.5.0 at `e89ed1d` | this pull request |
 | v0.1.2 | 2026-10-16 | Carries the value case of the TOM Release and each element's decided priority in the design map, unchanged (§5.1 rule 1; A.1), for the register of value of slice 2; the transition waves follow the decided priority (A.6); Annex D item 13; Annex E pins TOM `v0.6.0` (`decisions/DR-0003`). TEST-DI v1, cases 49 and 50, added before any use | v1.5.0 | this pull request |
 | v0.2.0 | 2026-10-18 | Complete, slices 1 to 4 (`decisions/DR-0004`): mode C and the light design (§5.11); the service, S5 Accompany (§5.12 to §5.16), S6 Operate (§5.17 to §5.20) and S7 Improve (§5.21 to §5.24); export (§5.25); drafts from the organisation's own templates and the cost draft (§5.6); the health check each quarter; answers at the point of work; the ladder with level 2 (Annex G); records of work through the projection (Annex H); three Pods and fourteen Cells added; TEST-DI v1, cases 51 to 94, added before any use | v1.6.0 at `acdcbe5` | this pull request |
+| v0.2.1 | 2026-10-19 | The Chief of Staff takes its COS code: `[ORG]CELL-DCS` → `[ORG]CELL-COSDI` (Naming Standard R16, `49GAION/DR-0028`; `decisions/DR-0005`). The old code is retired and kept in the card's lineage; the part test is renamed; nothing else changes | v1.6.0 at `acdcbe5` | this repository's pull request for this version |
 
 ---
 
@@ -1602,7 +1603,7 @@ The parts inside this AIOC (`docs/CELLS-AND-PODS.md` of `49GAION-aioc`). The rol
 | Code | Kind | Type | Filler kind | HOAC label | Parent | Fixed test (owner) | External ports |
 |---|---|---|---|---|---|---|---|
 | `[ORG]CELL-DDL` | CELL | Human Seat | human | `[ORG]HOAC-ACS` | `[ORG]AIOC-DI` | TEST-DI-DDL v1 (the Cell carrying `[ORG]HOAC-TM`) | none |
-| `[ORG]CELL-DCS` | CELL | AI Chief of Staff | ai | none | `[ORG]AIOC-DI` | TEST-DI-DCS v1 (`[ORG]CELL-DDL`) | `ppd-in`, `ppd-out`, `tom-out`, `tom-in`, `sl-in`, `sl-out`, `tools-in` |
+| `[ORG]CELL-COSDI` | CELL | AI Chief of Staff | ai | none | `[ORG]AIOC-DI` | TEST-DI-COSDI v1 (`[ORG]CELL-DDL`) | `ppd-in`, `ppd-out`, `tom-out`, `tom-in`, `sl-in`, `sl-out`, `tools-in` |
 | `[ORG]POD-DD` | POD | AI Pod | — | none | `[ORG]AIOC-DI` | TEST-DI-DD v1 (`[ORG]CELL-DDL`) | — |
 | `[ORG]CELL-DDM` | CELL | AI Agent | ai | none | `[ORG]POD-DD` | TEST-DI-DDM v1 (`[ORG]CELL-DDL`) | none |
 | `[ORG]CELL-DGA` | CELL | AI Agent | ai | none | `[ORG]POD-DD` | TEST-DI-DGA v1 (`[ORG]CELL-DDL`) | none |
@@ -1634,14 +1635,14 @@ The parts inside this AIOC (`docs/CELLS-AND-PODS.md` of `49GAION-aioc`). The rol
 | `[ORG]CELL-DTJ` | CELL | AI Agent | ai | none | `[ORG]POD-DCI` | TEST-DI-DTJ v1 (`[ORG]CELL-DDL`) | none |
 | `[ORG]CELL-DCM` | CELL | AI Agent | ai | none | `[ORG]POD-DCI` | TEST-DI-DCM v1 (`[ORG]CELL-DDL`) | none |
 
-**The card data (the blueprint governs).** `tools/make_cards.py` expands the block below into the complete unit cards and bot identity cards, writes them into `cards/`, and checks them against the schemas of `49GAION-protocol`, Naming Standard R15, and this blueprint.
+**The card data (the blueprint governs).** `tools/make_cards.py` expands the block below into the complete unit cards and bot identity cards, writes them into `cards/`, and checks them against the schemas of `49GAION-protocol`, Naming Standard R15 and R16, and this blueprint.
 
 ```yaml
 parts:
   defaults:
     accountable_to: "[ORG]CELL-DDL"
-    card_version: "v0.2.0"
-    version: "0.2.0"
+    card_version: "v0.2.1"
+    version: "0.2.1"
     lifecycle_state: "designed"
     test_version: "v1"
     test_owner: "[ORG]CELL-DDL"
@@ -1667,14 +1668,16 @@ parts:
       ai_out: ["run control and configuration"]
       hu_in: ["direction from the Cell carrying [ORG]HOAC-TM"]
       hu_out: ["rulings, attestations and reduced-level acceptances, under live sign-in", "report to the Cell carrying [ORG]HOAC-TM"]
-    - code: "[ORG]CELL-DCS"
+    - code: "[ORG]CELL-COSDI"
+      code_rule: "R16"                     # 49GAION/DR-0028; replaces [ORG]CELL-DCS (retired, R5)
+      lineage: { id: "[ORG]CELL-DCS", version: "0.2.0", relation: "derived" }
       full_name: "DI Chief of Staff"
       role: "Chief of Staff"
       parent: "[ORG]AIOC-DI"
       type: "AI Chief of Staff"
       filler_kind: "ai"
       cell_kind: "chief-of-staff-cell"
-      test: { id: "TEST-DI-DCS", cases: "1, 2, 4, 8, 10-13, 15-22, 25, 40-46, 48, 51, 55, 66, 69-71, 73, 74, 78, 83, 84, 86, 89, 92, 94" }
+      test: { id: "TEST-DI-COSDI", cases: "1, 2, 4, 8, 10-13, 15-22, 25, 40-46, 48, 51, 55, 66, 69-71, 73, 74, 78, 83, 84, 86, 89, 92, 94" }
       ai_in: ["release notice", "return answer", "source reference", "needs answer", "needs status", "change notice", "records of work through the projection", "needs candidate", "return draft", "locked outputs of the Pods", "settled review records", "verified answer"]
       ai_out: ["Input Pack version", "dispatch to a Pod", "review packet", "return", "needs request", "missing report", "Decision Package", "launch package filing", "living design filing", "export"]
       hu_in: ["run request from the Requesting Authority's Cell (references only)", "service request from the Requesting Authority's Cell (references only)", "a question from a position (never a source)", "a problem report from a position (never a source)", "a decision of a deciding position", "an insertion, a preview approval or an acknowledgement by a position", "run control from the DI Delivery Lead"]
@@ -1729,12 +1732,12 @@ parts:
 - **Bots.** Each AI Cell's bot (twenty-six) has its own identity card, its own credential, `never_signs: true`, and its memory sealed on a change of filler (Protocol §10, item 3). The credential IDs in `cards/bots/` are placeholders.
 - The Requesting Authority, the deciding positions, the Chief of Staff of `[ORG]AIOC-SL` and the Cells of `[ORG]AIOC-PPD` and `[ORG]AIOC-TOM` are not Cells of this AIOC.
 
-**Code checks** (Naming Standard R15 and §5), recorded on 15 and 18 October 2026. Each organisation repeats the check of §5.2 against its own register before first use.
+**Code checks** (Naming Standard R15, R16 and §5), recorded on 15 and 18 October 2026; the Chief of Staff's COS code on 19 October 2026. Each organisation repeats the check of §5.2 against its own register before first use.
 
 | Code | Initials of the full name (R15) | §5.1 | §5.2: no match among this blueprint's codes, nor with `[ORG]AIOC-DI` | §5.3 |
 |---|---|---|---|---|
 | `[ORG]CELL-DDL` | **D**I **D**elivery **L**ead | pass | pass | pass |
-| `[ORG]CELL-DCS` | **D**I **C**hief of **S**taff ("of" skipped) | pass | pass (distinct from `[ORG]CELL-PCS`, `[ORG]CELL-TCS` and `[ORG]CELL-SLCS` of other AIOCs) | pass |
+| `[ORG]CELL-COSDI` | R16, item 2 (`49GAION/DR-0028`): COS and the initials of `[ORG]AIOC-DI` → COSDI. It replaces `[ORG]CELL-DCS`, retired at v0.2.1 (R5) and kept in the card's lineage | pass | pass (distinct from the COS codes of the other mothers: `COSSL`, `COSOER`, `COSPC`, `COSPPD`, `COSTOM`, `COSCH`) | pass |
 | `[ORG]POD-DD` / `[ORG]CELL-DDM`, `-DGA`, `-DHC` | DI Diagnosis / Design Mapper, Gap Auditor, Health Checker | pass | pass | pass |
 | `[ORG]POD-DP` / `[ORG]CELL-DPW`, `-DBW`, `-DTP` | DI Preparation / Procedure Writer, Brief Writer, Transition Planner | pass | pass | pass |
 | `[ORG]POD-DA` / `[ORG]CELL-DAG`, `-DCV` | DI Answers / Answer Guide, Citation Verifier | pass | pass | pass |
