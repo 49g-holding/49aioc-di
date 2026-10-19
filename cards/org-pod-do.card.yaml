@@ -5,11 +5,11 @@ full_name: DI Operations
 parent: '[ORG]AIOC-DI'
 accountable_to: '[ORG]CELL-DDL'
 type: AI Pod
-card_version: v0.2.0
-version: 0.2.0
+card_version: v0.2.1
+version: 0.2.1
 lineage:
   id: '[ORG]POD-DO'
-  version: 0.2.0
+  version: 0.2.1
   relation: original
 lifecycle_state: designed
 fixed_test:

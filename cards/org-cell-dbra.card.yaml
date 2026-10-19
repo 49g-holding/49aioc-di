@@ -5,11 +5,11 @@ full_name: DI Blind Reviewer A
 parent: '[ORG]POD-DR'
 accountable_to: '[ORG]CELL-DDL'
 type: AI Agent
-card_version: v0.2.0
-version: 0.2.0
+card_version: v0.2.1
+version: 0.2.1
 lineage:
   id: '[ORG]CELL-DBRA'
-  version: 0.2.0
+  version: 0.2.1
   relation: original
 lifecycle_state: designed
 fixed_test:
