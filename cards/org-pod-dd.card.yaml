@@ -5,11 +5,11 @@ full_name: DI Diagnosis
 parent: '[ORG]AIOC-DI'
 accountable_to: '[ORG]CELL-DDL'
 type: AI Pod
-card_version: v0.1.2
-version: 0.1.2
+card_version: v0.2.0
+version: 0.2.0
 lineage:
   id: '[ORG]POD-DD'
-  version: 0.1.2
+  version: 0.2.0
   relation: original
 lifecycle_state: designed
 fixed_test:
@@ -20,6 +20,7 @@ inner_units:
 - '[ORG]CELL-DDM'
 - '[ORG]CELL-DGA'
 - '[ORG]CELL-DHC'
+- '[ORG]CELL-DLD'
 top_cell: '[ORG]CELL-DGA'
 ports:
 - unit: '[ORG]POD-DD'
@@ -41,6 +42,7 @@ ports:
   identification: technical-key
   accepted_content:
   - design map
+  - light design
   - gap report
   - health check
   - return draft

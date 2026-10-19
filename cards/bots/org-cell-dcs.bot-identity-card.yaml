@@ -16,6 +16,13 @@ allowed_actions:
 - send verified answers to the asking position
 - send Decision Package rows to the deciding positions
 - file a package whose elements are decided
+- send rows for decision, forum packs, minutes previews and notices to positions
+- enter a draft a position inserted
+- apply a level-2 change within a class the owner position approved in advance, with
+  its rollback
+- keep the version register and record acknowledgements
+- run checklists per case
+- produce the export
 ask_first_actions:
 - a second run in parallel
 - a budget above the cap

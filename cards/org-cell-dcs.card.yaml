@@ -5,11 +5,11 @@ full_name: DI Chief of Staff
 parent: '[ORG]AIOC-DI'
 accountable_to: '[ORG]CELL-DDL'
 type: AI Chief of Staff
-card_version: v0.1.2
-version: 0.1.2
+card_version: v0.2.0
+version: 0.2.0
 lineage:
   id: '[ORG]CELL-DCS'
-  version: 0.1.2
+  version: 0.2.0
   relation: original
 lifecycle_state: designed
 fixed_test:
@@ -29,6 +29,8 @@ ports:
   - source reference
   - needs answer
   - needs status
+  - change notice
+  - records of work through the projection
   - needs candidate
   - return draft
   - locked outputs of the Pods
@@ -53,6 +55,8 @@ ports:
   - missing report
   - Decision Package
   - launch package filing
+  - living design filing
+  - export
   authority_limit: as in its role card (blueprint §4-§5)
   audit_trail: the run record of [ORG]AIOC-DI
   required_tests:
@@ -65,8 +69,11 @@ ports:
   identification: live-human-sign-in-at-gateway
   accepted_content:
   - run request from the Requesting Authority's Cell (references only)
+  - service request from the Requesting Authority's Cell (references only)
   - a question from a position (never a source)
+  - a problem report from a position (never a source)
   - a decision of a deciding position
+  - an insertion, a preview approval or an acknowledgement by a position
   - run control from the DI Delivery Lead
   authority_limit: the signer's authority_scope; nothing received here is a source
   audit_trail: the run record of [ORG]AIOC-DI
@@ -81,6 +88,10 @@ ports:
   accepted_content:
   - answer to the asking position
   - Decision Package rows to the deciding positions
+  - rows for decision to the deciding positions
+  - forum packs and minutes previews to the forum's positions
+  - notices to the positions a record concerns
+  - a learning path and its check results to the learner position only
   - run brief and ruling sheets to the DI Delivery Lead
   - filing notice to the Requesting Authority's Cell
   authority_limit: information only
@@ -147,6 +158,7 @@ ports:
   - source reference
   - needs answer
   - needs status
+  - change notice
   authority_limit: the read scope signed under connect-external-port over [ORG]AIOC-SL
   audit_trail: unit register; serve log of [ORG]AIOC-SL
   required_tests:
@@ -162,9 +174,23 @@ ports:
   - missing report
   - return filing
   - launch package filing
+  - living design filing
   authority_limit: 'the request and write scope signed over [ORG]AIOC-SL: this AIOC''s
-    own packages and design reports only'
+    own packages, decided versions and design reports only'
   audit_trail: unit register; serve log of [ORG]AIOC-SL
+  required_tests:
+  - TEST-DI-DCS v1
+  enforcement: shared-gateway-outside-unit
+- unit: '[ORG]CELL-DCS'
+  port: tools-in
+  direction: input
+  type: AI
+  identification: technical-key
+  accepted_content:
+  - records of work through the projection
+  authority_limit: read only, within the scope signed under connect-external-port
+    over the projection; only while process watching is on (Annex H)
+  audit_trail: unit register; the projection's log
   required_tests:
   - TEST-DI-DCS v1
   enforcement: shared-gateway-outside-unit

@@ -5,11 +5,11 @@ full_name: DI Preparation
 parent: '[ORG]AIOC-DI'
 accountable_to: '[ORG]CELL-DDL'
 type: AI Pod
-card_version: v0.1.2
-version: 0.1.2
+card_version: v0.2.0
+version: 0.2.0
 lineage:
   id: '[ORG]POD-DP'
-  version: 0.1.2
+  version: 0.2.0
   relation: original
 lifecycle_state: designed
 fixed_test:
@@ -42,7 +42,7 @@ ports:
   identification: technical-key
   accepted_content:
   - procedures
-  - briefs
+  - briefs and drafts
   - transition plan
   - go-live criteria
   authority_limit: as in its role card (blueprint §4-§5)

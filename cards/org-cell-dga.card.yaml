@@ -5,11 +5,11 @@ full_name: DI Gap Auditor
 parent: '[ORG]POD-DD'
 accountable_to: '[ORG]CELL-DDL'
 type: AI Agent
-card_version: v0.1.2
-version: 0.1.2
+card_version: v0.2.0
+version: 0.2.0
 lineage:
   id: '[ORG]CELL-DGA'
-  version: 0.1.2
+  version: 0.2.0
   relation: original
 lifecycle_state: designed
 fixed_test:
