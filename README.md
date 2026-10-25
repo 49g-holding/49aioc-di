@@ -1,5 +1,7 @@
 # Delivery and Implementation · `[ORG]AIOC-DI`
 
+> **Superseded and archived, 26 October 2026.** This repository held the instance of `[ORG]AIOC-DI` from which the mother blueprint of 49GAION Delivery and Implementation was taken, unchanged; it changes no more. The text lives on, for any organisation, in the mother repository <https://github.com/49g-holding/49GAION-delivery-and-implementation> (blueprint `v0.2.1`; `49GAION/DR-0024`, `DR-0044`). An organisation's own values and run records never lived here.
+
 > **Delivery and Implementation in one page**
 >
 > Delivery and Implementation (DI) takes an organisation's decided design into a running organisation, and stays to run and improve it with the organisation. It is the last stage of the design chain, after Process and Position Design.
